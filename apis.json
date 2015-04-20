@@ -116,7 +116,7 @@
   ],
   "include": [
     {
-      "name": "API API (Inception)",
+      "name": "APIs",
       "url": "https://kin-lane.github.io/api/apis.json"
     },
     {
@@ -158,10 +158,6 @@
     {
       "name": "Patent API",
       "url": "https://kin-lane.github.io/patent/apis.json"
-    },
-    {
-      "name": "People API",
-      "url": "https://kin-lane.github.io/people/apis.json"
     },
     {
       "name": "Question API",
