@@ -124,10 +124,6 @@
       "url": "https://kin-lane.github.io/blog/apis.json"
     },
     {
-      "name": "Building Block API",
-      "url": "https://kin-lane.github.io/buildingblock/apis.json"
-    },  
-    {
       "name": "Curated API",
       "url": "https://kin-lane.github.io/curated/apis.json"
     },
@@ -138,19 +134,11 @@
     {
       "name": "Image API",
       "url": "https://kin-lane.github.io/image/apis.json"
-    },
-    {
-      "name": "Keyword API",
-      "url": "https://kin-lane.github.io/keyword/apis.json"
-    },    
+    },   
     {
       "name": "Link API",
       "url": "https://kin-lane.github.io/link/apis.json"
     },   
-    {
-      "name": "Note API",
-      "url": "https://kin-lane.github.io/note/apis.json"
-    },
     {
       "name": "Organization API",
       "url": "https://kin-lane.github.io/organization/apis.json"
