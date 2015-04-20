@@ -4,14 +4,8 @@
   "image": "http://s3.amazonaws.com/kinlane-productions/api-evangelist/t-shirts/KL_InApiWeTrust-1000.png",
   "tags": [
     "Kin Lane",
-    "Audio",
-    "Blog",
-    "Comment",
-    "Image",
-    "Link",
-    "Note",
-    "Page",
-    "Video"
+    "API Portal",
+    "API Evangelist"
   ],
   "created": "2015-01-22",
   "modified": "2015-01-22",
@@ -126,10 +120,6 @@
       "url": "https://kin-lane.github.io/api/apis.json"
     },
     {
-      "name": "Audio API",
-      "url": "https://kin-lane.github.io/audio/apis.json"
-    },
-    {
       "name": "Blog API",
       "url": "https://kin-lane.github.io/blog/apis.json"
     },
@@ -166,10 +156,6 @@
       "url": "https://kin-lane.github.io/organization/apis.json"
     },
     {
-      "name": "Page API",
-      "url": "https://kin-lane.github.io/page/apis.json"
-    },
-    {
       "name": "Patent API",
       "url": "https://kin-lane.github.io/patent/apis.json"
     },
@@ -178,20 +164,12 @@
       "url": "https://kin-lane.github.io/people/apis.json"
     },
     {
-      "name": "Project API",
-      "url": "https://kin-lane.github.io/project/apis.json"
-    },
-    {
       "name": "Question API",
       "url": "https://kin-lane.github.io/question/apis.json"
     },   
     {
       "name": "Tag API",
       "url": "https://kin-lane.github.io/tag/apis.json"
-    },
-    {
-      "name": "Task API",
-      "url": "https://kin-lane.github.io/task/apis.json"
     },    
     {
       "name": "Tip API",
@@ -200,10 +178,6 @@
     {
       "name": "Tool API",
       "url": "https://kin-lane.github.io/tool/apis.json"
-    },
-    {
-      "name": "Video API",
-      "url": "https://kin-lane.github.io/video/apis.json"
     }
   ],
   "maintainers": [

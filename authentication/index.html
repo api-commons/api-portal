@@ -4,14 +4,15 @@ title: Authentication
 ---
 
 <p><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-authentication.png" align="right" width="150" style="padding: 15px;" /></p>
-<p>Since I do not store any user generated information, I do not employ oAuth, and try to keep my security as simple as possible. I use <a href="http://www.3scale.net/"></a>3Scale API infrastructure for my API management system</a>.</p>
-<p>I have many public APIs that do not require a key, you can just make a request, but all the APIs that are secured, require two keys:</p>
+<p>This the authentication page for this template API portal. It should provide as much detail as possible about how to authenticate with an API.</p>
+<p>Try to keep things as concise as possible, and explain it like you are explaining to someone who knows nothing about your API. Make sure and try to use common approaches to API authentication like:</p>
 
 <ul>
-	<li><strong>appid</strong> - An unique id that is generated for each application.</li>
-	<li><strong>appkey</strong> - An unique key that is generated for each application.</li>
+	<li><a href="http://en.wikipedia.org/wiki/Basic_access_authentication"><strong>Basic Auth</strong></a> - Basic access authentication is a method for an HTTP user agent to provide a user name and password when making a request.</li>
+	<li><a href="http://en.wikipedia.org/wiki/Application_programming_interface_key"><strong>API Keys</strong></a> - API keys are unique tokens that applications can use pass when calling an API.</li>
+	<li><a href="http://en.wikipedia.org/wiki/OAuth"><<strong>oAuth</strong>/a> - OAuth provides client applications a secure delegated access to server resources on behalf of a resource owner.</li>
 </ul>
 
-<p>I have chose to just include apid and appkey as a paramter, reducing friction for users, and integrations. Many API providers prefer putting them in headers, which I agree with, but I feel putting them as parameters makes them much more hackable.</p>
+<p>consider also providing an authentication tester, and if oAuth is used, it can be helpful to allow develoeprs to manually generate access tokens, to simply making test API calls.</p>
 
-<p>I would keep my APIs 100% public, but I need to limit usage, because it costs me money, but also I am a firm believer in keeping an eye on who is using my APIs.</p>
+<p>Remember authentication is one of the biggest areas struggle with when onboarding, so keep it as simple as possible.</p>
