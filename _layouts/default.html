@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  {% include head.html %}
+
+  <body>
+
+    <header class="masthead">
+    	
+      <script type="text/javascript">
+      	// Do we have a token?
+    	var $oAuth_Token = getUrlVar('oAuth_Token');
+
+		var $org = '{{ site.org }}';
+		var $repo = '{{ site.repo }}';
+		var $oauthio = '{{ site.oauthio }}';
+
+      </script>	      
+    	
+      <div class="masthead-inner" align="center">  	 
+      	     	
+		<h2>{" {{ site.title }} "}</h2>      		
+    	<a href="http://bit.ly/1cHBhd5" target="_blank">
+    		<img src="https://s3.amazonaws.com/kinlane-productions/api-evangelist/3scale/Winning-in-the-API-Economy-eBook-3scale.png" width="35%" style="border: 1px solid #FFF; margin-bottom: 25px;" />
+    	</a>                   	      	
+        <div class="colophon">
+          <ul class="colophon-links">
+            <li>
+              <a href="/master/index.html" id="home-nav">Home</a>
+            </li>
+            <li>
+              <a href="/master/getting-started/" id="getting-started-nav">Getting Started</a>
+            </li>              
+            <li>
+              <a href="/master/documentation/" id="documentation-nav">Documentation</a>
+            </li>  
+            <li>
+              <a href="/master/code/" id="code-nav">Code</a>
+            </li> 
+            <li>
+              <a href="/master/blog/" id="blog-nav">Blog</a>
+            </li>         
+            <li>
+              <a href="/master/support/" id="support-nav">Support</a>
+            </li>                                 
+            <li>
+              <a href="/master/pricing/" id="pricing-nav">Pricing</a>
+            </li>      
+            <li style="padding-top: 15px;">
+              <a href="http://apievangelist.com"><< Return to API Evangelist</a>
+            </li>                                                                                    
+          </ul>
+        </div>   	                
+              
+        <script id="parterListingTemplate" type="text/template"> 
+            {% raw  %}  
+            <a href="{{url}}" target="_blank" title="{{title}}">
+           		<img src="{{logo}}" width="{{width}}" style="padding: 4px;" />
+            </a>   
+            {% endraw %}                                                                                                                    
+        </script>          
+        
+        <script type="text/javascript">
+        function listSponsors()
+            {
+            $.getJSON('https://s3.amazonaws.com/kinlane-productions/json/sponsors.json', function(data) {               
+                $.each(data['sponsors'], function(key, val) {                  
+                var template = $('#parterListingTemplate').html();
+                var html = Mustache.to_html(template, val);
+                $('#partnerListingContainer').append(html);
+                });         
+            });             
+        	}    
+        </script>
+
+        <div id="partnerListingContainer" align="center" style="background-color:#FFF; margin-top: 45px; padding-top: 10px; width: 60%; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border: 3px solid #FFFFFF; margin-bottom: 7px;">
+		
+		</div>
+        
+        <script type="text/javascript">
+            listSponsors();
+        </script>        
+        
+      </div>
+    </header>
+
+    <div class="content uicontainer">
+    	
+    	<p align="center">
+    		<a href="http://apievangelist.com">
+    			<img src="https://kinlane-productions.s3.amazonaws.com/api-evangelist/api-evangelist-logo-400.png" align="center" width="60%" style="padding-bottom: 10px;" />
+    		</a>
+    	</p>
+    	
+      	{{ content }}
+      
+		<br />
+		<!-- 3scale -->
+		<p align="center">
+		<a href="http://3scale.net" target="_blank" title="APIs From 3Scale">
+		    <img src="https://s3.amazonaws.com/kinlane-productions/api-service-providers/3Scale/empowered-by-3scale.png" width="300" style="padding-bottom: 25px;" />
+		</a>        
+		</p>
+		<!-- 3scale -->     
+	      
+	     <div class="footer">
+		    <ul>
+	            <li>
+	              <a href="/master/rate-limits/" id="apis-json-editor-nav">Rate Limits</a>
+	            </li>  
+	            <li>
+	              <a href="/master/roadmap/" id="apis-json-editor-nav">Roadmap</a>
+	            </li> 
+	            <li>
+	              <a href="/master/change-log/" id="apis-json-editor-nav">Change Log</a>
+	            </li> 
+	            <li>
+	              <a href="/master/status/" id="apis-json-editor-nav">Status</a>
+	            </li>  
+	            <li>
+	              <a href="/master/terms-of-service/" id="apis-json-editor-nav">Terms of Service</a>
+	            </li> 
+	            <li>
+	              <a href="/master/privacy-policy/" id="apis-json-editor-nav">Privacy Policy</a>
+	            </li>                                                                                         
+	            <li>
+	              <a href="/master/apis.json" id="apis-json-editor-nav">APIs.json</a>
+	            </li> 
+		    </ul>
+		</div>      
+      
+    </div>
+	
+	<!-- Google Code for API Evangelist visitors -->
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 964245031;
+	var google_conversion_label = "U2foCJGT0wkQp-zkywM";
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	/* ]]> */
+	</script>
+	<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+	</script>
+	<noscript>
+	<div style="display:inline;">
+	<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/964245031/?value=1.000000&amp;label=U2foCJGT0wkQp-zkywM&amp;guid=ON&amp;script=0"/>
+	</div>
+	</noscript>					
+	
+	<script src="https://{{ site.org }}.github.io/master/js/editor-apis-json.js" type="text/javascript"></script>
+	<script src="https://{{ site.org }}.github.io/master/js/navigator-apis-json.js" type="text/javascript"></script>
+	<script src="https://{{ site.org }}.github.io/master/js/browser-apis-json.js" type="text/javascript"></script>
+	<script src="https://{{ site.org }}.github.io/master/js/editor-swagger-json.js" type="text/javascript"></script>  
+	<script src="https://{{ site.org }}.github.io/master/js/editor-config-json.js" type="text/javascript"></script>
+	<script src="https://{{ site.org }}.github.io/master/js/editor-keys-json.js" type="text/javascript"></script>
+	<script src="https://{{ site.org }}.github.io/master/js/editor-question-json.js" type="text/javascript"></script>
+	<script src="https://{{ site.org }}.github.io/master/js/master-swagger-from-apis-json.js" type="text/javascript"></script>
+	<script src="https://{{ site.org }}.github.io/master/js/master-code-from-apis-json.js" type="text/javascript"></script>
+	
+	<script src="https://{{ site.org }}.github.io/{{ site.repo }}/js/load.js" type="text/javascript"></script>  	      	
+		
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+{
+  "name": "APIs.json Portal",
+  "description": "This is a template API portal, designed to show a healthy baseline for API operations, helping API providers be sucessful when deploying and managing their APIs. This site uses APIs.json as the core, providing a machine readable index of the API, and its upporting building blocks. ",
+  "image": "http://s3.amazonaws.com/kinlane-productions/api-evangelist/t-shirts/KL_InApiWeTrust-1000.png",
+  "tags": [
+    "Kin Lane",
+    "Audio",
+    "Blog",
+    "Comment",
+    "Image",
+    "Link",
+    "Note",
+    "Page",
+    "Video"
+  ],
+  "created": "2015-01-22",
+  "modified": "2015-01-22",
+  "url": "http://api-portal.apievangelist.com/apis.json",
+  "SpecificationVersion": "0.14",
+  "apis": [
+    {
+      "name": "APIs.json Portal",
+      "description": "This is the master portal for all of the Kin Lane APIs.",
+      "image": "http://s3.amazonaws.com/kinlane-productions/api-evangelist/t-shirts/KL_InApiWeTrust-1000.png",
+      "humanURL": "http://api-portal.apievangelist.com/",
+      "baseURL": "http://api-portal.apievangelist.com/apis.json",
+      "tags": [
+        "API",
+        "Application Programming Interface",
+        "Master"
+      ],
+      "properties": [
+        {
+          "type": "X-blog",
+          "url": "http://api-portal.apievangelist.com/blog/"
+        },
+        {
+          "type": "X-blog-rss-feed",
+          "url": "http://api-portal.apievangelist.com/blog.xml"
+        },
+        {
+          "type": "X-change-log",
+          "url": "http://api-portal.apievangelist.com/change-log/"
+        },
+        {
+          "type": "X-issues",
+          "url": "http://api-portal.apievangelist.com/issues/"
+        },        
+        {
+          "type": "X-code",
+          "url": "http://api-portal.apievangelist.com/code/"
+        },
+        {
+          "type": "X-portal",
+          "url": "https://kin-lane.github.io"
+        },
+        {
+          "type": "X-documentation",
+          "url": "http://api-portal.apievangelist.com/documentation/"
+        },
+        {
+          "type": "X-getting-started",
+          "url": "http://api-portal.apievangelist.com/getting-started/"
+        },
+        {
+          "type": "X-authentication",
+          "url": "http://api-portal.apievangelist.com/authentication/"
+        },        
+        {
+          "type": "X-faq",
+          "url": "http://api-portal.apievangelist.com/faq/"
+        },        
+        {
+          "type": "X-pricing",
+          "url": "http://api-portal.apievangelist.com/pricing/"
+        },
+        {
+          "type": "X-support",
+          "url": "http://api-portal.apievangelist.com/support/"
+        },        
+        {
+          "type": "X-privacy-policy",
+          "url": "http://api-portal.apievangelist.com/privacy-policy/"
+        },
+        {
+          "type": "X-rate-limits-page",
+          "url": "http://api-portal.apievangelist.com/rate-limits/"
+        },
+        {
+          "type": "X-issues",
+          "url": "http://api-portal.apievangelist.com/issues/"
+        },        
+        {
+          "type": "X-roadmap",
+          "url": "http://api-portal.apievangelist.com/roadmap/"
+        },
+        {
+          "type": "X-status-dashboard",
+          "url": "http://api-portal.apievangelist.com/status/"
+        },
+        {
+          "type": "X-terms-of-service",
+          "url": "http://api-portal.apievangelist.com/terms-of-service/"
+        },
+        {
+          "type": "X-twitter",
+          "url": "https://twitter.com/kinlane"
+        },
+        {
+          "type": "X-github",
+          "url": "https://github.com/kin-lane/"
+        }
+      ],
+      "contact": [
+        {
+          "FN": "API Evangliest",
+          "email": "info@apievangelist.com",
+          "X-twitter": "apievangelist"
+        }
+      ]
+    }
+  ],
+  "include": [
+    {
+      "name": "API API (Inception)",
+      "url": "https://kin-lane.github.io/api/apis.json"
+    },
+    {
+      "name": "Audio API",
+      "url": "https://kin-lane.github.io/audio/apis.json"
+    },
+    {
+      "name": "Blog API",
+      "url": "https://kin-lane.github.io/blog/apis.json"
+    },
+    {
+      "name": "Building Block API",
+      "url": "https://kin-lane.github.io/buildingblock/apis.json"
+    },  
+    {
+      "name": "Curated API",
+      "url": "https://kin-lane.github.io/curated/apis.json"
+    },
+    {
+      "name": "Glossary API",
+      "url": "https://kin-lane.github.io/glossary/apis.json"
+    },
+    {
+      "name": "Image API",
+      "url": "https://kin-lane.github.io/image/apis.json"
+    },
+    {
+      "name": "Keyword API",
+      "url": "https://kin-lane.github.io/keyword/apis.json"
+    },    
+    {
+      "name": "Link API",
+      "url": "https://kin-lane.github.io/link/apis.json"
+    },   
+    {
+      "name": "Note API",
+      "url": "https://kin-lane.github.io/note/apis.json"
+    },
+    {
+      "name": "Organization API",
+      "url": "https://kin-lane.github.io/organization/apis.json"
+    },
+    {
+      "name": "Page API",
+      "url": "https://kin-lane.github.io/page/apis.json"
+    },
+    {
+      "name": "Patent API",
+      "url": "https://kin-lane.github.io/patent/apis.json"
+    },
+    {
+      "name": "People API",
+      "url": "https://kin-lane.github.io/people/apis.json"
+    },
+    {
+      "name": "Project API",
+      "url": "https://kin-lane.github.io/project/apis.json"
+    },
+    {
+      "name": "Question API",
+      "url": "https://kin-lane.github.io/question/apis.json"
+    },   
+    {
+      "name": "Tag API",
+      "url": "https://kin-lane.github.io/tag/apis.json"
+    },
+    {
+      "name": "Task API",
+      "url": "https://kin-lane.github.io/task/apis.json"
+    },    
+    {
+      "name": "Tip API",
+      "url": "https://kin-lane.github.io/tip/apis.json"
+    },
+    {
+      "name": "Tool API",
+      "url": "https://kin-lane.github.io/tool/apis.json"
+    },
+    {
+      "name": "Video API",
+      "url": "https://kin-lane.github.io/video/apis.json"
+    }
+  ],
+  "maintainers": [
+    {
+      "FN": "API Evangliest",
+      "X-twitter": "apievangelist",
+      "email": "info@apievangelist.com"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+---
+layout: page
+title: Authentication
+---
+
+<p><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-authentication.png" align="right" width="150" style="padding: 15px;" /></p>
+<p>Since I do not store any user generated information, I do not employ oAuth, and try to keep my security as simple as possible. I use <a href="http://www.3scale.net/"></a>3Scale API infrastructure for my API management system</a>.</p>
+<p>I have many public APIs that do not require a key, you can just make a request, but all the APIs that are secured, require two keys:</p>
+
+<ul>
+	<li><strong>appid</strong> - An unique id that is generated for each application.</li>
+	<li><strong>appkey</strong> - An unique key that is generated for each application.</li>
+</ul>
+
+<p>I have chose to just include apid and appkey as a paramter, reducing friction for users, and integrations. Many API providers prefer putting them in headers, which I agree with, but I feel putting them as parameters makes them much more hackable.</p>
+
+<p>I would keep my APIs 100% public, but I need to limit usage, because it costs me money, but also I am a firm believer in keeping an eye on who is using my APIs.</p>
