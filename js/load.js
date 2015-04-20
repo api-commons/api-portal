@@ -2,7 +2,7 @@ var $login = getUrlVar('login');
 
   function deploySwagger()
   	{		
-	  var url = "https://kin-lane.github.io/" + $repo + "/swagger.json";
+	  var url = "/swagger.json";
 	  
 	  window.swaggerUi = new SwaggerUi({
 	    url: url,
@@ -106,12 +106,12 @@ if(document.getElementById("jsonBrowser"))
 	
 if(document.getElementById("master-swagger-section"))
 	{
-	loadMasterSwaggerFromAPIsJSON('/master/apis.json');
+	loadMasterSwaggerFromAPIsJSON('/apis.json');
 	}	
 	
 if(document.getElementById("code-page"))
 	{
-	loadCodeFromAPIsJSON('/master/apis.json',0,0);
+	loadCodeFromAPIsJSON('/apis.json',0,0);
 	}		
 	
 if(document.getElementById("swaggerEditor"))
