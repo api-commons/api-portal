@@ -82,12 +82,12 @@ function APIJSONBrowserGetHeader(name,description,url,image,apijsonurl)
 	{		
     html = '<tr>';
     html = html + '<td align="left" valign="top" colspan="2" id="apisjsonHeaderCell">';
-    html = html + '<a href="' + url + '" title="' + name + '"><img src="' + image + '" width="100" align="left" style="padding: 15px;" /></a>';
+    html = html + '<a href="' + url + '" title="' + name + '"><img src="' + image + '" width="100" align="left" style="padding: 15px;" /></a><div id="apisjsonimage"></div>';
     
-    html = html + '<a href="' + url + '" id="apisjsonlink" style="color: #000; font-size: 22px; text-decoration: none;" title="' + name + '"><strong>' + name + '</strong></a>';
+    html = html + '<div id="apisjsontitle"></div><a href="' + url + '" style="color: #000; font-size: 22px; text-decoration: none;" title="' + name + '"><strong>' + name + '</strong></a>';
     html = html + '  (<a href="' + url + '" style="color: #000; font-size: 18px;" title="' + name + '">apis.json</a>)';
     
-    html = html + '<br />' + description;
+    html = html + '<br /><div id="apisjsondescription"></div>' + description;
     html = html + '</td>';
     html = html + '</tr>';   	
 	
