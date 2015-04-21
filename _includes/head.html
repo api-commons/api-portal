@@ -167,18 +167,18 @@
 						},
 						submit:function(e,v,m,f){ 
 							if(v == -1){
-								e.preventDefault();
-								$.prompt.prevState();
+							e.preventDefault();
+								$.prompt.nextState();
 							}
 						}
 					},
 					{
-						title: 'FAQ',
-						html:"Provide a simple list of the frequently asked questions, breaking down the common questions that get asked via common support channels for API support.",
+						title: 'Self-Service Registration',
+						html:"A self-service option for registering for API access, 24/7. Provide additional options via Github, Twitter, LinkedIn, and Facebook OAuth to create account, preventing the creation of yet another account.",
 						buttons: { Back: -1, Done: 0 },
 						focus: 1,
 						position: {
-							container: '#d-faq', 
+							container: '#d-self-service-registration', 
 							x: 75, 
 							y: 0, 
 							width: 400, 
