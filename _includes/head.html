@@ -211,6 +211,25 @@
 						}
 					},
 					{
+						title: 'Code',
+						html:"Offer as many code resources as possible, offering developers as many language choices as possible when it comes to code samples, libraries, and full blown Software Development Kits (SDK), and Platform Development Kits (PDK)",
+						buttons: { Back: -1, Next: 1 },
+						focus: 1,
+						position: {
+							container: '#d-documentation', 
+							x: 75, 
+							y: 0, 
+							width: 400, 
+							arrow: 'tr'
+						},
+						submit:function(e,v,m,f){ 
+							if(v == 1){
+								e.preventDefault();
+								$.prompt.nextState();
+							}
+						}
+					},					
+					{
 						title: 'Pricing',
 						html:"Provide details on what an API costs to access, with clear details on each level of access, the details that come with a tier, and as much information as you can about what is involved with billing.",
 						buttons: { Back: -1, Next: 1 },
