@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="https://s3.amazonaws.com/kinlane-productions/css/syntax.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700|Abril+Fatface">
 
+  <link rel="stylesheet" media="all" type="text/css" href="https://s3.amazonaws.com/kinlane-productions/css/jquery-impromptu.css" />
+  
   <!-- Icons -->
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -46,8 +48,82 @@
   
   <script src="https://s3.amazonaws.com/kinlane-productions/js/mustache.js" type="text/javascript"></script>
   <script src="https://s3.amazonaws.com/kinlane-productions/js/utilities.js" type="text/javascript"></script>    
+  
+  <script src="https://s3.amazonaws.com/kinlane-productions/js/jquery-impromptu.js"></script>
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog.xml">
+  
+		<script>
+			$(document).ready(function(){
+
+				var tourdemo = [
+					{
+						title: 'Edit Your Profile',
+						html:'Click here to edit your profile.',
+						buttons: { Cancel: 0, Next: 1 },
+						focus: 1,
+						position: { 
+							container: '#EditProfile', 
+							x: 170, 
+							y: 0,
+							width: 300, 
+							arrow: 'lt' 
+						},
+						submit:function(e,v,m,f){ 
+							if(v == 1){
+								e.preventDefault();
+								$.prompt.nextState();
+							}
+						}
+					},
+					{
+						title: 'Calendar',
+						html:'Your calendar is located here.',
+						buttons: { Back: -1, Next: 1 },
+						focus: 1,
+						position: { 
+							container: '#Calendar', 
+							x: -10, 
+							y: -145, 
+							width: 200, 
+							arrow: 'bl'
+						},
+						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
+							if(v == 1){
+								e.preventDefault();
+								$.prompt.nextState();
+							}
+						}
+					},
+					{
+						title: 'Sign Out',
+						html:"No rush, but when you're done..",
+						buttons: { Back: -1, Done: 0 },
+						focus: 1,
+						position: {
+							container: 'a.signout', 
+							x: -200, 
+							y: 40, 
+							width: 240, 
+							arrow: 'tr'
+						},
+						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
+						}
+					}
+				];
+
+				$.prompt(tourdemo);
+				
+			});
+		</script>  
   
 </head>
