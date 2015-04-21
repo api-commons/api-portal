@@ -559,7 +559,7 @@
 					{
 						title: 'API Endpoints',
 						html:"List of available endpoints, providing a quick glance at the resources currently available.",
-						buttons: { Back: -1, Next: 0 },
+						buttons: { Back: -1, Next: 1 },
 						focus: 1,
 						position: {
 							container: '#jsonBrowserIncludeTable', 
@@ -582,6 +582,29 @@
 					{
 						title: 'Be Supportive',
 						html:'Make sure and support your platform.',
+						buttons: { Back: -1, Next: 1 },
+						focus: 1,
+						position: { 
+							container: '#pageheader', 
+							x: 140, 
+							y: 0,
+							width: 400, 
+							arrow: 'lt' 
+						},
+						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
+							if(v == 1){
+								e.preventDefault();
+								$.prompt.nextState();
+							}
+						}
+					},
+					{
+						title: 'View APIs.json',
+						html:'Click to view the APIs.json file, that is the entire index for this demo API portal, and can provide an index for your API operations as well.',
 						buttons: { Cancel: 0, Next: 1 },
 						focus: 1,
 						position: { 
@@ -597,7 +620,7 @@
 								$.prompt.prevState();
 							}
 						}
-					},
+					}					
 				];
 
 				$.prompt(tourdemo);
