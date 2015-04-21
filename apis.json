@@ -37,6 +37,10 @@
           "url": "http://api-portal.apievangelist.com/change-log/"
         },
         {
+          "type": "X-self-service-registration",
+          "url": "http://api-portal.apievangelist.com/registration/"
+        },        
+        {
           "type": "X-issues",
           "url": "http://api-portal.apievangelist.com/issues/"
         },        

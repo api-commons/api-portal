@@ -171,6 +171,25 @@
 								$.prompt.prevState();
 							}
 						}
+					},
+					{
+						title: 'FAQ',
+						html:"Provide a simple list of the frequently asked questions, breaking down the common questions that get asked via common support channels for API support.",
+						buttons: { Back: -1, Done: 0 },
+						focus: 1,
+						position: {
+							container: '#d-faq', 
+							x: 75, 
+							y: 0, 
+							width: 400, 
+							arrow: 'tr'
+						},
+						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
+						}
 					}
 				];
 

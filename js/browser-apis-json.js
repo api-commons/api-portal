@@ -383,6 +383,16 @@ function buildAPIsJSONBrowser(apisJSON)
 	        		document.getElementById("onboarding").style.display = '';		
 	        		}	        		
 	        	}
+	        if($propertyType == "X-self-service-registration")
+	        	{
+	        	if(document.getElementById($propertyType + "-row"))	
+	        		{
+	        		document.getElementById($propertyType + "-row").style.display = '';
+	        		document.getElementById($propertyType + "-url").href=$propertyURL;
+	        		document.getElementById($propertyType + "-img-url").href=$propertyURL;
+	        		document.getElementById("onboarding").style.display = '';		
+	        		}	        		
+	        	}	        	
 	        if($propertyType == "X-authentication")
 	        	{
 	        	if(document.getElementById($propertyType + "-row"))	
