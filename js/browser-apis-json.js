@@ -321,10 +321,10 @@ function buildAPIsJSONBrowser(apisJSON)
 		 				 	
 			//$Property = APIJSONBrowserPropertyListing($apiName,$propertyType,$propertyURL,$apicount,$propertycount); 			
 			//$('#jsonBrowserTable').append($Property);
-			console.log($propertyType);
+			//console.log($propertyType);
 	        if($propertyType == "X-blog")
 	        	{
-	        	console.log("blog:" + document.getElementById($propertyType + "-row"));
+	        	//console.log("blog:" + document.getElementById($propertyType + "-row"));
 	        	if(document.getElementById($propertyType + "-row"))	
 	        		{
 	        		document.getElementById($propertyType + "-row").style.display = '';
