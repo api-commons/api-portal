@@ -90,15 +90,10 @@
 							arrow: 'bl'
 						},
 						submit:function(e,v,m,f){ 
-							if(v == -1){
-								e.preventDefault();
-								$.prompt.prevState();
-							}
 							if(v == 1){
 								e.preventDefault();
 								$.prompt.nextState();
 							}
-						}
 					},
 					{
 						title: 'Informative Description',
@@ -113,11 +108,10 @@
 							arrow: 'tr'
 						},
 						submit:function(e,v,m,f){ 
-							if(v == -1){
+							if(v == 1){
 								e.preventDefault();
-								$.prompt.prevState();
+								$.prompt.nextState();
 							}
-						}
 					},
 					{
 						title: 'Getting Started',
@@ -132,11 +126,10 @@
 							arrow: 'tr'
 						},
 						submit:function(e,v,m,f){ 
-							if(v == -1){
+							if(v == 1){
 								e.preventDefault();
-								$.prompt.prevState();
+								$.prompt.nextState();
 							}
-						}
 					},
 					{
 						title: 'Getting Started',
