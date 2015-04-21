@@ -90,6 +90,10 @@
 							arrow: 'bl'
 						},
 						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
 							if(v == 1){
 								e.preventDefault();
 								$.prompt.nextState();
@@ -109,6 +113,10 @@
 							arrow: 'tr'
 						},
 						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
 							if(v == 1){
 								e.preventDefault();
 								$.prompt.nextState();
@@ -128,6 +136,10 @@
 							arrow: 'tr'
 						},
 						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
 							if(v == 1){
 								e.preventDefault();
 								$.prompt.nextState();
@@ -147,6 +159,10 @@
 							arrow: 'tr'
 						},
 						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
 							if(v == 1){
 								e.preventDefault();
 								$.prompt.nextState();
@@ -166,6 +182,10 @@
 							arrow: 'tr'
 						},
 						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
 							if(v == 1){
 								e.preventDefault();
 								$.prompt.nextState();
@@ -185,6 +205,10 @@
 							arrow: 'tr'
 						},
 						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
 							if(v == 1){
 								e.preventDefault();
 								$.prompt.nextState();
@@ -204,6 +228,10 @@
 							arrow: 'tr'
 						},
 						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
 							if(v == 1){
 								e.preventDefault();
 								$.prompt.nextState();
@@ -216,7 +244,7 @@
 						buttons: { Back: -1, Next: 1 },
 						focus: 1,
 						position: {
-							container: '#d-documentation', 
+							container: '#d-code', 
 							x: 75, 
 							y: 0, 
 							width: 400, 
@@ -242,6 +270,10 @@
 							arrow: 'tr'
 						},
 						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
 							if(v == 1){
 								e.preventDefault();
 								$.prompt.nextState();
