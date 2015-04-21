@@ -175,7 +175,7 @@
 					{
 						title: 'Self-Service Registration',
 						html:"A self-service option for registering for API access, 24/7. Provide additional options via Github, Twitter, LinkedIn, and Facebook OAuth to create account, preventing the creation of yet another account.",
-						buttons: { Back: -1, Done: 0 },
+						buttons: { Back: -1, Next: 1 },
 						focus: 1,
 						position: {
 							container: '#d-self-service-registration', 
@@ -185,12 +185,69 @@
 							arrow: 'tr'
 						},
 						submit:function(e,v,m,f){ 
-							if(v == -1){
+							if(v == 1){
 								e.preventDefault();
-								$.prompt.prevState();
+								$.prompt.nextState();
 							}
 						}
-					}
+					},
+					{
+						title: 'Documentation',
+						html:"Provide up to date documentation for all endpoints, preferrably via a machine readable API definition like API Blueprint or Swagger. Documentation is the most important aspect of on-boarding API consumers.",
+						buttons: { Back: -1, Next: 1 },
+						focus: 1,
+						position: {
+							container: '#d-documentation', 
+							x: 75, 
+							y: 0, 
+							width: 400, 
+							arrow: 'tr'
+						},
+						submit:function(e,v,m,f){ 
+							if(v == 1){
+								e.preventDefault();
+								$.prompt.nextState();
+							}
+						}
+					},
+					{
+						title: 'Pricing',
+						html:"Provide details on what an API costs to access, with clear details on each level of access, the details that come with a tier, and as much information as you can about what is involved with billing.",
+						buttons: { Back: -1, Next: 1 },
+						focus: 1,
+						position: {
+							container: '#d-pricing', 
+							x: 75, 
+							y: 0, 
+							width: 400, 
+							arrow: 'tr'
+						},
+						submit:function(e,v,m,f){ 
+							if(v == 1){
+								e.preventDefault();
+								$.prompt.nextState();
+							}
+						}
+					},
+					{
+						title: 'Rate Limits',
+						html:"Offer clear details on what rate limits are imposed with API operations, and how these are related to API pricing.",
+						buttons: { Back: -1, Next: 1 },
+						focus: 1,
+						position: {
+							container: '#d-rate-limits', 
+							x: 75, 
+							y: 0, 
+							width: 400, 
+							arrow: 'tr'
+						},
+						submit:function(e,v,m,f){ 
+							if(v == 1){
+								e.preventDefault();
+								$.prompt.nextState();
+							}
+						}
+					}						
 				];
 
 				$.prompt(tourdemo);
