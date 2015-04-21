@@ -80,7 +80,7 @@
 					{
 						title: 'Simple Title',
 						html:'Providing a simple, easy to understand title for the API, platform, colleciton, or other grouping for operations.',
-						buttons: { Cancel: 0, Back: -1, Next: 1 },
+						buttons: { Back: -1, Next: 1 },
 						focus: 1,
 						position: { 
 							container: '#apisjsontitle', 
@@ -293,12 +293,108 @@
 							arrow: 'tr'
 						},
 						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
 							if(v == 1){
 								e.preventDefault();
 								$.prompt.nextState();
 							}
 						}
-					}						
+					},
+					{
+						title: 'Blog',
+						html:"A blog is the #1 tool in any API evangelist toolbox, and provides a communication that that is critical to educating existing API developers, as well as attracting potential new users.",
+						buttons: { Back: -1, Next: 1 },
+						focus: 1,
+						position: {
+							container: '#d-blog', 
+							x: 75, 
+							y: 0, 
+							width: 400, 
+							arrow: 'tr'
+						},
+						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
+							if(v == 1){
+								e.preventDefault();
+								$.prompt.nextState();
+							}
+						}
+					},
+					{
+						title: 'Blog RSS',
+						html:"An RSS feed provides a machine readable version of blog communication that much like an API, can be used in multiple platforms.",
+						buttons: { Back: -1, Next: 1 },
+						focus: 1,
+						position: {
+							container: '#d-blog', 
+							x: 75, 
+							y: 0, 
+							width: 400, 
+							arrow: 'tr'
+						},
+						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
+							if(v == 1){
+								e.preventDefault();
+								$.prompt.nextState();
+							}
+						}
+					},
+					{
+						title: 'Twitter',
+						html:"Twitter is an essential messaging platform on the open Internet, providing a public, and private channel for engaging with develoeprs.",
+						buttons: { Back: -1, Next: 1 },
+						focus: 1,
+						position: {
+							container: '#d-blog', 
+							x: 75, 
+							y: 0, 
+							width: 400, 
+							arrow: 'tr'
+						},
+						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
+							if(v == 1){
+								e.preventDefault();
+								$.prompt.nextState();
+							}
+						}
+					},
+					{
+						title: 'Github',
+						html:"Github is an essential platform for not just manaing the code around aPI operations, but increasingly almsot every other aspect of API operations.",
+						buttons: { Back: -1, Next: 1 },
+						focus: 1,
+						position: {
+							container: '#d-blog', 
+							x: 75, 
+							y: 0, 
+							width: 400, 
+							arrow: 'tr'
+						},
+						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
+							if(v == 1){
+								e.preventDefault();
+								$.prompt.nextState();
+							}
+						}
+					}							
 				];
 
 				$.prompt(tourdemo);
