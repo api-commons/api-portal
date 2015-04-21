@@ -53,7 +53,7 @@
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog.xml">
-  
+  {% if page.title == 'API Portal' %}
 		<script>
 			$(document).ready(function(){
 
@@ -573,6 +573,10 @@
 								e.preventDefault();
 								$.prompt.prevState();
 							}
+							if(v == 1){
+								e.preventDefault();
+								$.prompt.nextState();
+							}
 						}
 					},	
 					{
@@ -588,9 +592,9 @@
 							arrow: 'lt' 
 						},
 						submit:function(e,v,m,f){ 
-							if(v == 1){
+							if(v == -1){
 								e.preventDefault();
-								$.prompt.nextState();
+								$.prompt.prevState();
 							}
 						}
 					},
@@ -600,5 +604,5 @@
 				
 			});
 		</script>  
-  
+  {% endif %}
 </head>
