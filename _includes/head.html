@@ -574,7 +574,26 @@
 								$.prompt.prevState();
 							}
 						}
-					}														
+					},	
+					{
+						title: 'Be Supportive',
+						html:'Make sure and support your platform.',
+						buttons: { Cancel: 0, Next: 1 },
+						focus: 1,
+						position: { 
+							container: '#pageheader', 
+							x: 140, 
+							y: 0,
+							width: 400, 
+							arrow: 'lt' 
+						},
+						submit:function(e,v,m,f){ 
+							if(v == 1){
+								e.preventDefault();
+								$.prompt.nextState();
+							}
+						}
+					},
 				];
 
 				$.prompt(tourdemo);
