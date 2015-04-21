@@ -332,7 +332,7 @@
 						buttons: { Back: -1, Next: 1 },
 						focus: 1,
 						position: {
-							container: '#d-blog', 
+							container: '#d-blog-rss', 
 							x: 75, 
 							y: 0, 
 							width: 400, 
@@ -355,7 +355,7 @@
 						buttons: { Back: -1, Next: 1 },
 						focus: 1,
 						position: {
-							container: '#d-blog', 
+							container: '#d-twitter', 
 							x: 75, 
 							y: 0, 
 							width: 400, 
@@ -378,7 +378,7 @@
 						buttons: { Back: -1, Next: 1 },
 						focus: 1,
 						position: {
-							container: '#d-blog', 
+							container: '#d-github', 
 							x: 75, 
 							y: 0, 
 							width: 400, 
@@ -394,7 +394,187 @@
 								$.prompt.nextState();
 							}
 						}
-					}							
+					},
+					{
+						title: 'Support',
+						html:"Provide a page dedicated to support, offering one click access to each of the areas of support offered for the platform.",
+						buttons: { Back: -1, Next: 1 },
+						focus: 1,
+						position: {
+							container: '#d-support', 
+							x: 75, 
+							y: 0, 
+							width: 400, 
+							arrow: 'tr'
+						},
+						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
+							if(v == 1){
+								e.preventDefault();
+								$.prompt.nextState();
+							}
+						}
+					},
+					{
+						title: 'Roadmap',
+						html:"Offer up information on where the API platform is headed, and what is planned for changes in 30 days, 60 days, 3 monts, 6 months, and as far in the future as you can safely predict.",
+						buttons: { Back: -1, Next: 1 },
+						focus: 1,
+						position: {
+							container: '#d-roadmap', 
+							x: 75, 
+							y: 0, 
+							width: 400, 
+							arrow: 'tr'
+						},
+						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
+							if(v == 1){
+								e.preventDefault();
+								$.prompt.nextState();
+							}
+						}
+					},
+					{
+						title: 'Issues',
+						html:"Provide quick access to known issues that are occuring via a platform, so developers know what open issues there are, and potentially saving resources in supporting additional quesitons.",
+						buttons: { Back: -1, Next: 1 },
+						focus: 1,
+						position: {
+							container: '#d-issues', 
+							x: 75, 
+							y: 0, 
+							width: 400, 
+							arrow: 'tr'
+						},
+						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
+							if(v == 1){
+								e.preventDefault();
+								$.prompt.nextState();
+							}
+						}
+					},
+					{
+						title: 'Change Log',
+						html:"The change log provides a look at what is actually happening, and the changes that have been made in recent history, as well as further into the past.",
+						buttons: { Back: -1, Next: 1 },
+						focus: 1,
+						position: {
+							container: '#d-change-log', 
+							x: 75, 
+							y: 0, 
+							width: 400, 
+							arrow: 'tr'
+						},
+						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
+							if(v == 1){
+								e.preventDefault();
+								$.prompt.nextState();
+							}
+						}
+					},
+					{
+						title: 'Status',
+						html:"Status dasbhoards provide real-time information from outside sources about the availability of a platform.",
+						buttons: { Back: -1, Next: 1 },
+						focus: 1,
+						position: {
+							container: '#d-status-dashboard', 
+							x: 75, 
+							y: 0, 
+							width: 400, 
+							arrow: 'tr'
+						},
+						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
+							if(v == 1){
+								e.preventDefault();
+								$.prompt.nextState();
+							}
+						}
+					},
+					{
+						title: 'Terms of Service',
+						html:"Include access to the terms of service for a platform, providing quick access to the legal side of API operations.",
+						buttons: { Back: -1, Next: 1 },
+						focus: 1,
+						position: {
+							container: '#d-terms-of-service', 
+							x: 75, 
+							y: 0, 
+							width: 400, 
+							arrow: 'tr'
+						},
+						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
+							if(v == 1){
+								e.preventDefault();
+								$.prompt.nextState();
+							}
+						}
+					},
+					{
+						title: 'Privacy Policy',
+						html:"In addition to the terms of service, let users know how the platform is looking out for their operations.",
+						buttons: { Back: -1, Next: 1 },
+						focus: 1,
+						position: {
+							container: '#d-privacy-policy', 
+							x: 75, 
+							y: 0, 
+							width: 400, 
+							arrow: 'tr'
+						},
+						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
+							if(v == 1){
+								e.preventDefault();
+								$.prompt.nextState();
+							}
+						}
+					},
+					{
+						title: 'API Endpoints',
+						html:"List of available endpoints, providing a quick glance at the resources currently available.",
+						buttons: { Back: -1, Next: 0 },
+						focus: 1,
+						position: {
+							container: '#jsonBrowserIncludeTable', 
+							x: 75, 
+							y: 0, 
+							width: 400, 
+							arrow: 'tr'
+						},
+						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
+						}
+					}														
 				];
 
 				$.prompt(tourdemo);
