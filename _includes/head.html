@@ -581,31 +581,12 @@
 					},	
 					{
 						title: 'View APIs.json',
-						html:'Click to view the APIs.json file, that is the entire index for this demo API portal, and can provide an index for your API operations as well.',
-						buttons: { Cancel: 0, Next: 1 },
-						focus: 1,
-						position: { 
-							container: '#apis-json-apis-json-nav', 
-							x: -150, 
-							y: 0,
-							width: 400, 
-							arrow: 'lt' 
-						},
-						submit:function(e,v,m,f){ 
-							if(v == -1){
-								e.preventDefault();
-								$.prompt.prevState();
-							}
-						}
-					},	
-					{
-						title: 'Be Supportive',
-						html:'Take care of your API commuity and they will take care of you.',
+						html:'Click to view the APIs.json file, that is the entire index for this demo API portal, and can provide an index for your API operations as well.',						
 						buttons: { Back: -1, Next: 1 },
 						focus: 1,
 						position: { 
-							container: '#pageheader', 
-							x: 140, 
+							container: '#apis-json-apis-json-nav', 
+							x: -200, 
 							y: 0,
 							width: 400, 
 							arrow: 'lt' 
@@ -620,6 +601,25 @@
 								$.prompt.nextState();
 							}
 						}
+					},	
+					{
+						title: 'Be Supportive',
+						html:'Take care of your API commuity and they will take care of you.',
+						buttons: { Cancel: 0, Next: 1 },
+						focus: 1,
+						position: { 
+							container: '#pageheader', 
+							x: 140, 
+							y: 0,
+							width: 400, 
+							arrow: 'lt' 
+						},
+						submit:function(e,v,m,f){ 
+							if(v == -1){
+								e.preventDefault();
+								$.prompt.prevState();
+							}
+						}						
 					}									
 				];
 
