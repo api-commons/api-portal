@@ -19,9 +19,9 @@ BASE_PATH : http://api-portal.apievangelist.com
 categories_path : /categories.html
 tags_path : /tags.html
 
-org: api-commons
+org: api-evangelist
 repo: api-portal
-resource: Master
+resource: portal
 oauthio: qUDL4eZqKPFb41SwuWIYIwLR6jI
 
 # Masthead title

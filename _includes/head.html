@@ -945,7 +945,7 @@
   <!-- Icons -->
   <link rel="shortcut icon" type="image/x-icon" href="http://apievangelist.com/favicon.ico">
 	<link rel="icon" type="image/x-icon" href="http://apievangelist.com/favicon.ico">
-  
+
   <link rel="stylesheet" media="all" type="text/css" href="https://s3.amazonaws.com/kinlane-productions/css/jquery-impromptu.css" />
 
   <script type="text/javascript" src="/{{ site.repo }}/js/tiny_mce/tiny_mce.js"></script>
@@ -976,7 +976,9 @@
 
   {% if page.title == 'Demo APIs.json Driven Portal' %}
  		<script>
- 			$(document).ready(function(){
+
+      function showDemo()
+        {
 
  				var tourdemo = [
  					{
@@ -1545,8 +1547,7 @@
  				];
 
  				$.prompt(tourdemo);
-
- 			});
+        }
  		</script>
    {% endif %}
 
