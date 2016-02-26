@@ -37,7 +37,7 @@ feature_image_width: 45
 
 # Project
 project_image: https://kinlane-productions.s3.amazonaws.com/api-evangelist/api-evangelist-logo-400.png
-project_summary: This is a template API portal, designed to show a healthy baseline for API operations, helping API providers be sucessful when deploying and managing their APIs. This site uses APIs.json as the core, providing a machine readable index of the API, and its upporting building blocks.
+project_summary: This is a template API portal, designed to show a healthy baseline for API operations, helping API providers be sucessful when deploying and managing their APIs. This site uses APIs.json as the core, providing a machine readable index of the API, and its supporting building blocks.
 
 # Navigation
 navigation:
