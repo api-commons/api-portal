@@ -111,7 +111,7 @@ navigation:
     label2:
     link2:
     size2: 10
-    padding: 20
+    padding: 5
     decorate: 1
 
 # Footer Navigation
@@ -132,6 +132,6 @@ footernavigation:
     link: http://kinlane.com/contacts/
 
 # sponsors
-sponsors_margin_top: 15
+sponsors_margin_top: 5
 sponsors_padding_top: 10
 sponsors_json_url: https://s3.amazonaws.com/kinlane-productions/json/sponsors.json
