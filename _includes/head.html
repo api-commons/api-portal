@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="https://s3.amazonaws.com/kinlane-productions/css/swagger-reset.css">
   <link rel="stylesheet" href="https://s3.amazonaws.com/kinlane-productions/css/swagger.css">
 
+  <link rel="stylesheet" media="all" type="text/css" href="https://s3.amazonaws.com/kinlane-productions/css/jquery-impromptu.css" />
+
   <!--Bootstrap-->
   <link href="https://s3.amazonaws.com/kinlane-productions/bootstrap/css/bootstrap.css" rel="stylesheet">
 
@@ -967,7 +969,585 @@
   <script src="https://s3.amazonaws.com/kinlane-productions/js/mustache.js" type="text/javascript"></script>
   <script src="https://s3.amazonaws.com/kinlane-productions/js/utilities.js" type="text/javascript"></script>
 
+  <script src="https://s3.amazonaws.com/kinlane-productions/js/jquery-impromptu.js"></script>
+
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog.xml">
+
+  {% if page.title == 'Demo APIs.json Driven Portal' %}
+ 		<script>
+ 			$(document).ready(function(){
+
+ 				var tourdemo = [
+ 					{
+ 						title: 'APIs.json Driven Portal (Walkthrough)',
+ 						html:'This is a demo API driven by APIs.json, demonstrating the potential of a standardized approach to API operations.',
+ 						buttons: { Cancel: 0, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#jsonBrowserOuterTable',
+ 							x: 140,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'lt'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Simple Title',
+ 						html:'Providing a simple, easy to understand title for the API, platform, colleciton, or other grouping for operations.',
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#apisjsontitle',
+ 							x: 400,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'bl'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Informative Description',
+ 						html:"Provide a simple, concise description of what an API does, providing a description for someone who knows nothing about the company behind operations.",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#apisjsondescription',
+ 							x: 450,
+ 							y: 50,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Getting Started',
+ 						html:"Simple, step by step instructions on how to onboard with the platform, the required resources, and go from idea to integration in as few steps as possible.",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#d-getting-started',
+ 							x: 75,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Authentication',
+ 						html:"Providing valuable information about how authentication is handled on the platform, directly referencing the technology that is used to secure API access.",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#d-authentication',
+ 							x: 75,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'FAQ',
+ 						html:"Provide a simple list of the frequently asked questions, breaking down the common questions that get asked via common support channels for API support.",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#d-faq',
+ 							x: 75,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Self-Service Registration',
+ 						html:"A self-service option for registering for API access, 24/7. Provide additional options via Github, Twitter, LinkedIn, and Facebook OAuth to create account, preventing the creation of yet another account.",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#d-self-service-registration',
+ 							x: 75,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Documentation',
+ 						html:"Provide up to date documentation for all endpoints, preferrably via a machine readable API definition like API Blueprint or Swagger. Documentation is the most important aspect of on-boarding API consumers.",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#d-documentation',
+ 							x: 75,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Code',
+ 						html:"Offer as many code resources as possible, offering developers as many language choices as possible when it comes to code samples, libraries, and full blown Software Development Kits (SDK), and Platform Development Kits (PDK)",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#d-code',
+ 							x: 75,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Pricing',
+ 						html:"Provide details on what an API costs to access, with clear details on each level of access, the details that come with a tier, and as much information as you can about what is involved with billing.",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#d-pricing',
+ 							x: 75,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Rate Limits',
+ 						html:"Offer clear details on what rate limits are imposed with API operations, and how these are related to API pricing.",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#d-rate-limits',
+ 							x: 75,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Blog',
+ 						html:"A blog is the #1 tool in any API evangelist toolbox, and provides a communication that that is critical to educating existing API developers, as well as attracting potential new users.",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#d-blog',
+ 							x: 75,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Blog RSS',
+ 						html:"An RSS feed provides a machine readable version of blog communication that much like an API, can be used in multiple platforms.",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#d-blog-rss-feed',
+ 							x: 75,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Twitter',
+ 						html:"Twitter is an essential messaging platform on the open Internet, providing a public, and private channel for engaging with develoeprs.",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#d-twitter',
+ 							x: 75,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Github',
+ 						html:"Github is an essential platform for not just manaing the code around aPI operations, but increasingly almsot every other aspect of API operations.",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#d-github',
+ 							x: 75,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Support',
+ 						html:"Provide a page dedicated to support, offering one click access to each of the areas of support offered for the platform.",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#d-support',
+ 							x: 75,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Roadmap',
+ 						html:"Offer up information on where the API platform is headed, and what is planned for changes in 30 days, 60 days, 3 monts, 6 months, and as far in the future as you can safely predict.",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#d-roadmap',
+ 							x: 75,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Issues',
+ 						html:"Provide quick access to known issues that are occuring via a platform, so developers know what open issues there are, and potentially saving resources in supporting additional quesitons.",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#d-issues',
+ 							x: 75,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Change Log',
+ 						html:"The change log provides a look at what is actually happening, and the changes that have been made in recent history, as well as further into the past.",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#d-change-log',
+ 							x: 75,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Status',
+ 						html:"Status dasbhoards provide real-time information from outside sources about the availability of a platform.",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#d-status-dashboard',
+ 							x: 75,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Terms of Service',
+ 						html:"Include access to the terms of service for a platform, providing quick access to the legal side of API operations.",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#d-terms-of-service',
+ 							x: 75,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Privacy Policy',
+ 						html:"In addition to the terms of service, let users know how the platform is looking out for their operations.",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#d-privacy-policy',
+ 							x: 75,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'API Endpoints',
+ 						html:"List of available endpoints, providing a quick glance at the resources currently available.",
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#jsonBrowserIncludeTable',
+ 							x: 75,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'tr'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'View APIs.json',
+ 						html:'Click to view the APIs.json file, that is the entire index for this demo API portal, and can provide an index for your API operations as well.',
+ 						buttons: { Back: -1, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#apis-json-apis-json-nav',
+ 							x: -510,
+ 							y: 0,
+ 							width: 500,
+ 							arrow: 'lt'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 							if(v == 1){
+ 								e.preventDefault();
+ 								$.prompt.nextState();
+ 							}
+ 						}
+ 					},
+ 					{
+ 						title: 'Be Supportive',
+ 						html:'Take care of your API commuity and they will take care of you.',
+ 						buttons: { Cancel: 0, Next: 1 },
+ 						focus: 1,
+ 						position: {
+ 							container: '#jsonBrowserOuterTable',
+ 							x: 140,
+ 							y: 0,
+ 							width: 400,
+ 							arrow: 'lt'
+ 						},
+ 						submit:function(e,v,m,f){
+ 							if(v == -1){
+ 								e.preventDefault();
+ 								$.prompt.prevState();
+ 							}
+ 						}
+ 					}
+ 				];
+
+ 				$.prompt(tourdemo);
+
+ 			});
+ 		</script>
+   {% endif %}
 
 </head>
