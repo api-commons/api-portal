@@ -1,18 +1,16 @@
-title:        APIs.json Portal
+title:        API Portal
 url:          http://api-portal.apievangelist.com
 version:      1.1.1
 author:
   name:       'Kin Lane'
   email:      'info@apievangelist.com'
-markdown:     rdiscount
-permalink:    pretty
-pygments:     true
+markdown:     kramdown
 
-permalink: /:categories/:year/:month/:day/:title 
+permalink: /:categories/:year/:month/:day/:title/
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 
-paginate: 50
-paginate_path: "/blog/page:num"
+paginate: 150
+paginate_path: "/blog/page:num/"
 
 production_url : http://api-portal.apievangelist.com
 
@@ -25,3 +23,115 @@ org: api-commons
 repo: api-portal
 resource: Master
 oauthio: qUDL4eZqKPFb41SwuWIYIwLR6jI
+
+# Masthead title
+masthead_link: http://api-portal.apievangelist.com/
+masthead_font_size: 75
+masthead_title: '{"API Portal"}'
+
+# Feature
+feature_title: API Design Providers Guide
+feature_link: http://apis.how/xzca4kr2wb
+feature_image_source: https://s3.amazonaws.com/kinlane-productions/whitepapers/3scale/report-image-api-design.png
+feature_image_width: 45
+
+# Project
+project_image: https://kinlane-productions.s3.amazonaws.com/api-evangelist/api-evangelist-logo-400.png
+project_summary: This is a template API portal, designed to show a healthy baseline for API operations, helping API providers be sucessful when deploying and managing their APIs. This site uses APIs.json as the core, providing a machine readable index of the API, and its upporting building blocks.
+
+# Navigation
+navigation:
+  - label1: Home
+    link1: /index.html
+    size1: 80
+    extend: 0
+    label2:
+    link2:
+    size2: 0
+    padding: 0
+    decorate: 0
+  - label1: Getting Started
+    link1: /getting-started/
+    size1: 80
+    extend: 0
+    label2:
+    link2:
+    size2: 60
+    padding: 2
+    decorate: 0
+  - label1: Documentation
+    link1: /documentation/
+    size1: 80
+    extend: 0
+    label2:
+    link2:
+    size2: 60
+    padding: 0
+    decorate: 0
+  - label1: Code
+    link1: /code/
+    size1: 80
+    extend: 0
+    label2:
+    link2:
+    size2: 60
+    padding: 0
+    decorate: 0
+  - label1: Blog
+    link1: /blog/
+    size1: 80
+    extend: 0
+    label2:
+    link2:
+    size2: 60
+    padding: 0
+    decorate: 0
+  - label1: Support
+    link1: /support/
+    size1: 80
+    extend: 0
+    label2:
+    link2:
+    size2: 60
+    padding: 0
+    decorate: 0
+  - label1: Pricing
+    link1: /pricing/
+    size1: 80
+    extend: 0
+    label2:
+    link2:
+    size2: 60
+    padding: 0
+    decorate: 0
+  - label1: Return to API Evangelist
+    link1: http://apievangelist.com
+    size1: 80
+    extend: 0
+    label2:
+    link2:
+    size2: 10
+    padding: 20
+    decorate: 1
+
+# Footer Navigation
+footernavigation:
+  - label: API 100K View
+    link: http://apievangelist.com
+  - label: News
+    link: /news/
+  - label: Partners
+    link: http://apievangelist.com/partners/
+  - label: APIs.json
+    link: http://apisjson.org
+  - label: About Kin Lane
+    link: http://kinlane.com
+  - label: Branding Guidelines
+    link: http://apievangelist.com/branding-guidelines.html
+  - label: Contact
+    link: http://kinlane.com/contacts/
+
+# sponsors
+sponsors_margin_top: 15
+sponsors_padding_top: 10
+sponsors_json_url: https://s3.amazonaws.com/kinlane-productions/json/sponsors.json

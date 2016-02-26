@@ -6,122 +6,135 @@
   <body>
 
     <header class="masthead">
-    	
-      <script type="text/javascript">
-      	// Do we have a token?
-    	var $oAuth_Token = getUrlVar('oAuth_Token');
+      <div class="masthead-inner" align="center">
 
-		var $org = '{{ site.org }}';
-		var $repo = '{{ site.repo }}';
-		var $oauthio = '{{ site.oauthio }}';
+        <script type="text/javascript">
+        	// Do we have a token?
+        	var $oAuth_Token = getUrlVar('oAuth_Token');
 
-      </script>	      
-    	
-      <div class="masthead-inner" align="center">  	 
-      	     	
-		<h3>{" {{ site.title }} "}</h3>      		
-    	<a href="http://bit.ly/1cHBhd5" target="_blank">
-    		<img src="https://s3.amazonaws.com/kinlane-productions/api-evangelist/3scale/Winning-in-the-API-Economy-eBook-3scale.png" width="35%" style="border: 1px solid #FFF; margin-bottom: 25px;" />
-    	</a>                   	      	
+    		  var $org = '{{ site.org }}';
+    		  var $repo = '{{ site.repo }}';
+    	    var $oauthio = '{{ site.oauthio }}';
+
+        </script>
+
+        <!-- Masthead Title -->
+        <h2><a href="{{ site.masthead_link }}" style="font-size: {{ site.masthead_font_size }}%;">{{ site.masthead_title }}</a></h2>
+
+        <!-- Feature -->
+        <a href="{{ site.feature_link }}" target="_blank">
+          <img src="{{ site.feature_image_source }}" width="{{ site.feature_image_width }}%" style="border: 1px solid #FFF;" title="{{ site.feature_title }}" />
+        </a>
+
         <div class="colophon">
           <ul class="colophon-links">
-            <li>
-              <a href="/index.html" id="home-nav">Home</a>
+            {% for nav in site.navigation %}
+            <li style="padding-top:{{ nav.padding }}px">
+              <a href="{{ nav.link1 }}" style="font-size: {{ nav.size1 }}%;">
+                {% if nav.decorate == 1 %} <span style="font-size: {{ nav.size1 }}">&#8668;</span>{% endif %}
+                {{ nav.label1 }}
+              </a>
+              {% if nav.extend == 1 %} <span style="font-size: {{ nav.size2 }}%;">(<a href="{{ nav.link2 }}">{{ nav.label2 }}</a>)</span>{% endif %}
             </li>
-            <li>
-              <a href="/getting-started/" id="getting-started-nav">Getting Started</a>
-            </li>              
-            <li>
-              <a href="/documentation/" id="documentation-nav">Documentation</a>
-            </li>  
-            <li>
-              <a href="/code/" id="code-nav">Code</a>
-            </li> 
-            <li>
-              <a href="/blog/" id="blog-nav">Blog</a>
-            </li>         
-            <li>
-              <a href="/support/" id="support-nav">Support</a>
-            </li>                                 
-            <li>
-              <a href="/pricing/" id="pricing-nav">Pricing</a>
-            </li>              
-            <li style="padding-top: 10px;">
-              <a href="http://apievangelist.com"><< Return to API Evangelist</a>
-            </li>                                                                                    
+            {% endfor %}
           </ul>
-        </div>   	                
-              
-        <script id="parterListingTemplate" type="text/template"> 
-            {% raw  %}  
+        </div>
+
+        <!-- Sponsorship -->
+        <script id="parterListingTemplate" type="text/template">
+            {% raw  %}
             <a href="{{url}}" target="_blank" title="{{title}}">
-           		<img src="{{logo}}" width="{{width}}" style="padding: 4px;" />
-            </a>   
-            {% endraw %}                                                                                                                    
-        </script>          
-        
+           		<img src="{{logo}}" width="{{width}}" style="padding: 2px;" />
+            </a>
+            {% endraw %}
+        </script>
         <script type="text/javascript">
-        function listSponsors()
-            {
-            $.getJSON('https://s3.amazonaws.com/kinlane-productions/json/sponsors.json', function(data) {               
-                $.each(data['sponsors'], function(key, val) {                  
+        function listSponsors(){
+            $.getJSON('{{ site.sponsors_json_url }}', function(data) {
+                $.each(data['sponsors'], function(key, val) {
                 var template = $('#parterListingTemplate').html();
                 var html = Mustache.to_html(template, val);
                 $('#partnerListingContainer').append(html);
-                });         
-            });             
-        	}    
+                });
+            });
+          }
         </script>
+        <div id="partnerListingContainer" align="center" style="background-color:#FFF; margin-top: {{ site.sponsors_margin_top }}px; padding-top: {{ site.sponsors_padding_top }}px; width: 60%; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border: 3px solid #FFFFFF; margin-bottom: 2px;"></div>
+        <script type="text/javascript">listSponsors();</script>
+        <!-- Sponsorship -->
 
-        <div id="partnerListingContainer" align="center" style="background-color:#FFF; margin-top: 45px; padding-top: 10px; width: 60%; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border: 3px solid #FFFFFF; margin-bottom: 7px;">
-		
-		</div>
-        
-        <script type="text/javascript">
-            listSponsors();
-        </script>        
-        
       </div>
     </header>
 
     <div class="content uicontainer">
-    	
-    	<p align="center">
-    		<a href="http://apievangelist.com">
-    			<img src="https://kinlane-productions.s3.amazonaws.com/api-evangelist/api-evangelist-logo-400.png" align="center" width="60%" style="padding-bottom: 10px;" />
+
+      <p align="center"><a href="{{ site.url }}"><img src="{{ site.logo }}" align="center" width="{{ site.logo_width }}%" style="padding-bottom: {{ site.logo_bottom_padding }}px;" /></a></p>
+
+      {{ content }}
+
+      <center><hr style="padding: 5px 5px 5px 5px; margin: 5px; width: 85%;" /></center>
+  		<!-- 3scale -->
+  		<p align="center">
+    		<a href="http://apis.how/ake3nxbapm" target="_blank" title="API Infrastructure From 3Scale">
+    		    <img src="https://s3.amazonaws.com/kinlane-productions/api-service-providers/3Scale/empowered-by-3scale.png" width="300" style="" />
     		</a>
-    	</p>
-    	
-      	{{ content }}
-      
-	     <div class="footer">
-		    <ul>
-	            <li>
-	              <a href="/rate-limits/" id="apis-json-rate-limits-nav">Rate Limits</a>
-	            </li>  
-	            <li>
-	              <a href="/roadmap/" id="apis-json-roadmap-nav">Roadmap</a>
-	            </li> 
-	            <li>
-	              <a href="/change-log/" id="apis-json-change-log-nav">Change Log</a>
-	            </li> 
-	            <li>
-	              <a href="/status/" id="apis-json-status-nav">Status</a>
-	            </li>  
-	            <li>
-	              <a href="/terms-of-service/" id="apis-json-terms-of-service-nav">Terms of Service</a>
-	            </li> 
-	            <li>
-	              <a href="/privacy-policy/" id="apis-json-privacy-policy-nav">Privacy Policy</a>
-	            </li>                                                                                         
-	            <li>
-	              <a href="/apis.json" id="apis-json-apis-json-nav">APIs.json</a>
-	            </li> 
-		    </ul>
-		</div>      
-      
-    </div>
-	
+  		</p>
+  		<!-- 3scale -->
+
+      <div class="footer">
+        <ul>
+          {% for nav in site.footernavigation %}
+            <li><a href="{{ nav.link }}">{{ nav.label }}</a></li>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+  </div>
+
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-1119465-51']);
+	  _gaq.push(['_setDomainName', 'apievangelist.com']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	  function checkLinkRot()
+	    {
+	    var linkArray = [];
+	    var links = document.getElementsByTagName("a");
+	    for(var i=0; i<links.length; i++) {
+	        linkArray.push(links[i].href);
+	    }
+	    url = "http://linkrot.api.laneworks.net/v1/links/";
+	    var myJsonString = JSON.stringify(linkArray);
+	    $.ajax({
+	        type: "POST",
+	        url: url,
+	        data: myJsonString,
+	        success: function (data) {
+	             $.each(data, function($Key,$Value) {
+	                $URL = $Value['URL'];
+	                $returnURL = $Value['returnURL'];
+	                var links = document.getElementsByTagName("a");
+	                for(var i=0; i<links.length; i++) {
+	                    if(links[i].href==$URL)
+	                        {
+	                        document.getElementsByTagName("a")[i].href=$returnURL;
+	                        }
+	                     }
+	             });
+	        }
+	       });
+	    }
+
+	</script>
+
 	<!-- Google Code for API Evangelist visitors -->
 	<script type="text/javascript">
 	/* <![CDATA[ */
@@ -135,22 +148,19 @@
 	</script>
 	<noscript>
 	<div style="display:inline;">
-	<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/964245031/?value=1.000000&amp;label=U2foCJGT0wkQp-zkywM&amp;guid=ON&amp;script=0"/>
+	   <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/964245031/?value=1.000000&amp;label=U2foCJGT0wkQp-zkywM&amp;guid=ON&amp;script=0"/>
 	</div>
-	</noscript>					
-	
-	<script src="{{ production_url }}/js/editor-apis-json.js" type="text/javascript"></script>
-	<script src="{{ production_url }}/js/navigator-apis-json.js" type="text/javascript"></script>
-	<script src="{{ production_url }}/js/browser-apis-json.js" type="text/javascript"></script>
-	<script src="{{ production_url }}/js/editor-swagger-json.js" type="text/javascript"></script>  
-	<script src="{{ production_url }}/js/editor-config-json.js" type="text/javascript"></script>
-	<script src="{{ production_url }}/js/editor-keys-json.js" type="text/javascript"></script>
-	<script src="{{ production_url }}/js/editor-question-json.js" type="text/javascript"></script>
-	<script src="{{ production_url }}/js/master-swagger-from-apis-json.js" type="text/javascript"></script>
-	<script src="{{ production_url }}/js/master-code-from-apis-json.js" type="text/javascript"></script>
-	
-	<script src="{{ production_url }}/js/load.js" type="text/javascript"></script>  	      	
-		
-</body>
+	</noscript>
+
+  <script type="text/javascript">
+    // project view log
+  	$url = "http://project.api.kinlane.com/project/view/";
+  	$vlog = $.post($url, function() {});
+  </script>
+
+  <script src="http://Kin-Lane.github.io/master/js/navigator-apis-json.js" type="text/javascript"></script>
+  <script src="http://plans.apievangelist.com/js/load.js?y=1" type="text/javascript"></script>
+
+  </body>
 
 </html>
