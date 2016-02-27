@@ -57,7 +57,7 @@ navigation:
     label2:
     link2:
     size2: 60
-    padding: 2
+    padding: 0
     decorate: 0
   - label1: Documentation
     link1: /documentation/
