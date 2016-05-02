@@ -5,27 +5,15 @@
 
   <body>
 
-    <a href="https://github.com/{{ site.github_user }}/{{ site.github_repo }}"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
-
     <header class="masthead">
       <div class="masthead-inner" align="center">
-
-        <script type="text/javascript">
-        	// Do we have a token?
-        	var $oAuth_Token = getUrlVar('oAuth_Token');
-
-    		  var $org = '{{ site.org }}';
-    		  var $repo = '{{ site.repo }}';
-    	    var $oauthio = '{{ site.oauthio }}';
-
-        </script>
 
         <!-- Masthead Title -->
         <h2><a href="{{ site.masthead_link }}" style="font-size: {{ site.masthead_font_size }}%;">{{ site.masthead_title }}</a></h2>
 
         <!-- Feature -->
-        <a href="{{ site.feature_link }}" target="_blank">
-          <img src="{{ site.feature_image_source }}" width="{{ site.feature_image_width }}%" style="border: 1px solid #FFF;" title="{{ site.feature_title }}" />
+        <a href="{{ site.feature_link }}" target="_blank" id="feature_project_link">
+          <img id="feature_project_image" src="{{ site.feature_image_source }}" width="{{ site.feature_image_width }}%" style="border: 1px solid #FFF;" title="{{ site.feature_title }}" />
         </a>
 
         <div class="colophon">
@@ -46,7 +34,7 @@
         <script id="parterListingTemplate" type="text/template">
             {% raw  %}
             <a href="{{url}}" target="_blank" title="{{title}}">
-           		<img src="{{logo}}" width="75%" style="padding: 2px;" />
+           		<img src="{{logo}}" width="{{width}}" style="padding: 2px;" />
             </a>
             {% endraw %}
         </script>
@@ -61,14 +49,18 @@
             });
           }
         </script>
-        <div id="partnerListingContainer" align="center" style="background-color:#FFF; margin-top: {{ site.sponsors_margin_top }}px; padding-top: {{ site.sponsors_padding_top }}px; width: 60%; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border: 3px solid #FFFFFF; margin-bottom: 2px;"></div>
+        <div id="partnerListingContainer" align="center" style="background-color:#FFF; margin-top: {{ site.sponsors_margin_top }}px; padding: 15px; width: 50%; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border: 3px solid #FFFFFF; margin-bottom: 2px;"></div>
         <script type="text/javascript">listSponsors();</script>
         <!-- Sponsorship -->
 
       </div>
     </header>
 
-    <div class="content uicontainer">
+    <div class="content container">
+
+      <div class="ribbon">
+        <a href="/support/">Support This Project</a>
+      </div>
 
       <p align="center"><a href="{{ site.url }}"><img src="{{ site.logo }}" align="center" width="{{ site.logo_width }}%" style="padding-bottom: {{ site.logo_bottom_padding }}px;" /></a></p>
 
@@ -105,75 +97,33 @@
 	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
-
-	  function checkLinkRot()
-	    {
-	    var linkArray = [];
-	    var links = document.getElementsByTagName("a");
-	    for(var i=0; i<links.length; i++) {
-	        linkArray.push(links[i].href);
-	    }
-	    url = "http://linkrot.api.laneworks.net/v1/links/";
-	    var myJsonString = JSON.stringify(linkArray);
-	    $.ajax({
-	        type: "POST",
-	        url: url,
-	        data: myJsonString,
-	        success: function (data) {
-	             $.each(data, function($Key,$Value) {
-	                $URL = $Value['URL'];
-	                $returnURL = $Value['returnURL'];
-	                var links = document.getElementsByTagName("a");
-	                for(var i=0; i<links.length; i++) {
-	                    if(links[i].href==$URL)
-	                        {
-	                        document.getElementsByTagName("a")[i].href=$returnURL;
-	                        }
-	                     }
-	             });
-	        }
-	       });
-	    }
-
 	</script>
-
-	<!-- Google Code for API Evangelist visitors -->
-	<script type="text/javascript">
-	/* <![CDATA[ */
-	var google_conversion_id = 964245031;
-	var google_conversion_label = "U2foCJGT0wkQp-zkywM";
-	var google_custom_params = window.google_tag_params;
-	var google_remarketing_only = true;
-	/* ]]> */
-	</script>
-	<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-	</script>
-	<noscript>
-	<div style="display:inline;">
-	   <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/964245031/?value=1.000000&amp;label=U2foCJGT0wkQp-zkywM&amp;guid=ON&amp;script=0"/>
-	</div>
-	</noscript>
 
   <script type="text/javascript">
     // project view log
   	$url = "http://project.api.kinlane.com/project/view/";
   	$vlog = $.post($url, function() {});
+
+    // Feature Projects
+    function featureProjects()
+        {
+        $get_feature_project_url = "http://project.api.kinlane.com/project/feature/";
+        $.ajax({
+          url: $get_feature_project_url,
+          type:"GET",
+          success:function(data) {
+              $feature_title = data['feature_title'];
+              $feature_image = data['feature_image'];
+              $feature_url = data['feature_url'];
+              $("#feature_project_link").attr("href", $feature_url);
+              $("#feature_project_image").attr("src", $feature_image);
+              $("#feature_project_image").attr("title", $feature_title);
+            }
+        });
+        }
+    featureProjects();
+
   </script>
-
-  <script src="http://Kin-Lane.github.io/master/js/navigator-apis-json.js" type="text/javascript"></script>
-  <script src="http://plans.apievangelist.com/js/load.js?y=1" type="text/javascript"></script>
-
-  <script src="{{ production_url }}/js/editor-apis-json.js" type="text/javascript"></script>
-	<script src="{{ production_url }}/js/navigator-apis-json.js" type="text/javascript"></script>
-	<script src="{{ production_url }}/js/browser-apis-json.js" type="text/javascript"></script>
-	<script src="{{ production_url }}/js/editor-swagger-json.js" type="text/javascript"></script>
-	<script src="{{ production_url }}/js/editor-config-json.js" type="text/javascript"></script>
-	<script src="{{ production_url }}/js/editor-keys-json.js" type="text/javascript"></script>
-	<script src="{{ production_url }}/js/editor-question-json.js" type="text/javascript"></script>
-	<script src="{{ production_url }}/js/master-swagger-from-apis-json.js" type="text/javascript"></script>
-	<script src="{{ production_url }}/js/master-code-from-apis-json.js" type="text/javascript"></script>
-
-	<script src="{{ production_url }}/js/load.js" type="text/javascript"></script>
 
   </body>
 
