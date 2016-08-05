@@ -135,3 +135,18 @@ footernavigation:
 sponsors_margin_top: 5
 sponsors_padding_top: 10
 sponsors_json_url: https://s3.amazonaws.com/kinlane-productions/json/sponsors.json
+
+# Footer
+footer_title: API Evangelist
+footer_link: http://apievangelist.com
+footer_image_source: https://s3.amazonaws.com/kinlane-productions/footer/empowered-by-you-banner.png
+footer_image_width: 60
+
+# curated
+curated_desc: As I keep track on the world of APIs I curate news, blog posts, articles, and other research that I feel is relevant specifically to API deployment--these are the links I am including in my research.
+
+# organizations
+org_desc: As I keep track on the world of APIs and read through the information I am curating I keep an eye out for any company, institution, or other agency that is doing anything interesting with API deployment. These are the organizations I'm currently including in my API deployment research.
+
+# tools
+tools_desc: These are the open source API deployment tooling that I am tracking on as part of my research, and can be used to help in the API deployment process.
