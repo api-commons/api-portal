@@ -1,150 +1,75 @@
 ---
-layout: default
-title: Demo APIs.json Driven Portal
+layout: page
+title: 'APIs & Containers'
 ---
+<p style="font-size: 12px; padding:5px;">
+  <img src="{{ site.project_image }}" align="right" width="75" style="padding:15px;" />
+  {{ site.project_summary }}
+</p>
 
-<div style="background-color:#ff4c4c; width:100%; height: 40px; padding:5px; margin-bottom: 5px;">
-	<p align="center"><a href="#" onclick="showDemo();"><strong>Let me walk you through some of the common building blocks of an API portal!</strong></a></p>
+<center><hr style="padding: 5px 5px 5px 5px; margin: 5px; width: 85%;" /></center>
+<div class="row" style="vertical-align: top;" align="center">
+
+  <div class="span3" align="left" style="float: none; margin: 0 auto; display: inline-block; height: 100%; vertical-align: top;">
+
+    <p><strong><span style="font-size: 20px;">&#8620;</span>&nbsp;&nbsp;Top Links</strong></p>
+    <ul class="featurelist">
+      {% for org in site.data.organizations  limit:10 %}
+        <li><a href="{{ org.website }}">{{ org.name }}</a></li>
+      {% endfor %}
+    </ul>
+
+  </div>
+  <div class="span3" align="left" style="float: none; margin: 0 auto; display: inline-block; height: 100%; vertical-align: top;">
+    <p><strong><span style="font-size: 20px;">&#8620;</span>&nbsp;&nbsp;Latest News</strong><a href="/news.xml"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-rss-icon.png" width="15" style="padding-left: 5px;" /></a></p>
+    <ul class="newslist">
+      {% for curated in site.data.curated  limit:4 %}
+        <li><a href="{{ curated.url }}">{{ curated.title }}</a></li>
+      {% endfor %}
+    </ul>
+
+  </div>
+  <div class="span3" align="left" style="float: none; margin: 0 auto; display: inline-block; height: 100%; vertical-align: top;">
+
+    <script type="text/javascript">
+      $url = 'http://apievangelist.com/blog.xml';
+      var $listcount = 0;
+      $.get($url, function (data) {
+          $(data).find("item").each(function () {
+              var el = $(this);
+              $title = el.find("title").text();
+              $link = el.find("link").text();
+              if($listcount<4){
+                $listitem = '<li><a href="' + $link + '">' + $title + '</a></li>';
+                $('#rssNews').append($listitem);
+                }
+              $listcount++;
+          });
+      });
+    </script>
+    <p><strong><span style="font-size: 20px;">&#8620;</span>&nbsp;&nbsp;Latest Analysis</strong><a href="http://apievangelist.com/blog.xml"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-rss-icon.png" width="15" style="padding-left: 5px;" /></a></p>
+    <ul class="newslist" id="rssNews"></ul>
+
+  </div>
 </div>
+<center><hr style="padding: 5px; margin: 5px; width: 85%;" /></center>
 
-<div id="jsonBrowser">
-	<table cellpadding="3" cellspacing="2" border="0" width="95%" id="jsonBrowserOuterTable" style="margin-left: 15px;">
-		<tr>
-			<td colspan="3">
-				<table cellpadding="3" cellspacing="2" border="0" width="95%" id="jsonBrowserHeaderTable" style="margin-left: 15px;"></table>
-			</td>
-		</tr>
-		<tr>
-			<td width="45%" valign="top" align="center">
-				<table cellpadding="5" cellspacing="5" border="0" width="85%" id="jsonBrowserTable" style="margin-left: 15px;margin-top:15px;">
-					<tr id="onboarding" style="display: none;">
-						<td colspan="3" style="font-size: 22px; padding: 15px;"><strong>On-boarding</strong></td>
-					</tr>
-					<tr id="X-getting-started-row" style="display: none;">
-						<td width="25" style="height: 55px;"></td>
-						<td width="75" align="center" valign="middle"><a href="" id="X-getting-started-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-running.png" width="35" /></a></td>
-						<td><a href="" id="X-getting-started-url">Getting Started</a><div id="d-getting-started"></div></td>
-					</tr>
-					<tr id="X-authentication-row" style="display: none;">
-						<td width="25" style="height: 55px;"></td>
-						<td width="75" align="center" valign="middle"><a href="" id="X-authentication-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-authentication.png" width="35" /></a></td>
-						<td><a href="" id="X-authentication-url">Authentication</a><div id="d-authentication"></div></td>
-					</tr>
-					<tr id="X-faq-row" style="display: none;">
-						<td width="25" style="height: 55px;"></td>
-						<td width="75" align="center" valign="middle"><a href="" id="X-faq-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-question-mark.png" width="35" /></a></td>
-						<td><a href="" id="X-faq-url">FAQ</a><div id="d-faq"></div></td>
-					</tr>
-					<tr id="X-self-service-registration-row" style="display: none;">
-						<td width="25" style="height: 55px;"></td>
-						<td width="75" align="center" valign="middle"><a href="" id="X-self-service-registration-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-hand-wrench.jpg" width="35" /></a></td>
-						<td><a href="" id="X-self-service-registration-url">Registration</a><div id="d-self-service-registration"></div></td>
-					</tr>
-					<tr id="integration" style="display: none;">
-						<td colspan="3" style="font-size: 22px; padding: 15px;"><strong>Integration</strong></td>
-					</tr>
-					<tr id="X-documentation-row" style="display: none;">
-						<td width="25" style="height: 55px;"></td>
-						<td width="75" align="center" valign="middle"><a href="" id="X-documentation-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-documentation-interactive.png" width="35" /></a></td>
-						<td><a href="" id="X-documentation-url">Documentation</a><div id="d-documentation"></div></td>
-					</tr>
-					<tr id="X-code-row" style="display: none;">
-						<td width="25" style="height: 55px;"></td>
-						<td width="75" align="center" valign="middle"><a href="" id="X-code-img-url"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-code.png" width="35" /></a></td>
-						<td><a href="" id="X-code-url">Code</a><div id="d-code"></div></td>
-					</tr>
-					<tr id="X-pricing-row" style="display: none;">
-						<td width="25" style="height: 55px;"></td>
-						<td width="75" align="center" valign="middle"><a href="" id="X-pricing-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-dollar-sign.jpg" width="35" /></a></td>
-						<td><a href="" id="X-pricing-url">Pricing</a><div id="d-pricing"></div></td>
-					</tr>
-					<tr id="X-rate-limits-page-row" style="display: none;">
-						<td width="25" style="height: 55px;"></td>
-						<td width="75" align="center" valign="middle"><a href="" id="X-rate-limits-page-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-speed-limit.jpeg" width="35" /></a></td>
-						<td><a href="" id="X-rate-limits-page-url">Rate Limits</a><div id="d-rate-limits"></div></td>
-					</tr>
-					<tr id="communication" style="display: none;">
-						<td colspan="3" style="font-size: 22px; padding: 15px;"><strong>Communication</strong></td>
-					</tr>
-					<tr id="X-blog-row" style="display: none;">
-						<td width="25" style="height: 55px;"></td>
-						<td width="75" align="center" valign="middle"><a href="" id="X-blog-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-blog-icon.png" width="35" /></a></td>
-						<td><a href="" id="X-blog-url">Blog</a><div id="d-blog"></div></td>
-					</tr>
-					<tr id="X-blog-rss-feed-row" style="display: none;">
-						<td width="25" style="height: 55px;"></td>
-						<td width="75" align="center" valign="middle"><a href="" id="X-blog-rss-feed-img-url"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-rss-icon.png" width="35" /></a></td>
-						<td><a href="" id="X-blog-rss-feed-url">Blog RSS</a><div id="d-blog-rss-feed"></div></td>
-					</tr>
-					<tr id="X-twitter-row" style="display: none;">
-						<td width="25" style="height: 55px;"></td>
-						<td width="75" align="center" valign="middle"><a href="" id="X-twitter-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-twitter-icon.png" width="35" /></a></td>
-						<td><a href="" id="X-twitter-url">Twitter</a><div id="d-twitter"></div></td>
-					</tr>
-					<tr id="X-github-row" style="display: none;">
-						<td width="25" style="height: 55px;"></td>
-						<td width="75" align="center" valign="middle"><a href="" id="X-github-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-github.jpg" width="35" /></a></td>
-						<td><a href="" id="X-github-url">Github</a><div id="d-github"></div></td>
-					</tr>
-					<tr id="support" style="display: none;">
-						<td colspan="3" style="font-size: 22px; padding: 15px;"><strong>Support</strong></td>
-					</tr>
-					<tr id="X-support-row" style="display: none;">
-						<td width="25" style="height: 55px;"></td>
-						<td width="75" align="center" valign="middle"><a href="" id="X-support-img-url"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-support.png" width="35" /></a></td>
-						<td><a href="" id="X-support-url">Support</a><div id="d-support"></div></td>
-					</tr>
-					<tr id="updates" style="display: none;">
-						<td colspan="3" style="font-size: 22px; padding: 15px;"><strong>Updates</strong></td>
-					</tr>
-					<tr id="X-roadmap-row" style="display: none;">
-						<td width="25" style="height: 55px;"></td>
-						<td width="75" align="center" valign="middle"><a href="" id="X-roadmap-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-highway.png" width="35" /></a></td>
-						<td><a href="" id="X-roadmap-url">Roadmap</a><div id="d-roadmap"></div></td>
-					</tr>
-					<tr id="X-issues-row" style="display: none;">
-						<td width="25" style="height: 55px;"></td>
-						<td width="75" align="center" valign="middle"><a href="" id="X-issues-img-url"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-bug.png" width="35" /></a></td>
-						<td><a href="" id="X-issues-url">Issues</a><div id="d-issues"></div></td>
-					</tr>
-					<tr id="X-change-log-row" style="display: none;">
-						<td width="25" style="height: 55px;"></td>
-						<td width="75" align="center" valign="middle"><a href="" id="X-change-log-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-recycling.jpg" width="35" /></a></td>
-						<td><a href="" id="X-change-log-url">Change Log</a><div id="d-change-log"></div></td>
-					</tr>
-					<tr id="X-status-dashboard-row" style="display: none;">
-						<td width="25" style="height: 55px;"></td>
-						<td width="75" align="center" valign="middle"><a href="" id="X-status-dashboard-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-status-dashboard.png" width="35" /></a></td>
-						<td><a href="" id="X-status-dashboard-url">Status</a><div id="d-status-dashboard"></div></td>
-					</tr>
-					<tr id="legal" style="display: none;">
-						<td colspan="3" style="font-size: 22px; padding: 15px;"><strong>Legal</strong></td>
-					</tr>
-					<tr id="X-terms-of-service-row" style="display: none;">
-						<td width="25" style="height: 55px;"></td>
-						<td width="75" align="center" valign="middle"><a href="" id="X-terms-of-service-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-terms-conditions.png" width="35" /></a></td>
-						<td><a href="" id="X-terms-of-service-url">Terms of Service</a><div id="d-terms-of-service"></div></td>
-					</tr>
-					<tr id="X-privacy-policy-row" style="display: none;">
-						<td width="25" style="height: 55px;"></td>
-						<td width="75" align="center" valign="middle"><a href="" id="X-privacy-policy-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-privacy.png" width="35" /></a></td>
-						<td><a href="" id="X-privacy-policy-url">Privacy Policy</a><div id="d-privacy-policy"></div></td>
-					</tr>
-				</table>
-			</td>
-			<td width="55%" valign="top">
-				<table cellpadding="5" cellspacing="5" border="0" width="95%" id="jsonBrowserIncludeTable" style="margin-left: 15px;">
+<div class="row" align="center" style="">
 
-				</table>
-			</td>
-		</tr>
-	</table>
+  <div class="span5" style="float: none; margin: 0 auto; display: inline-block;" align="left">
+
+    <ul class="newslist" style="list-style: none; font-size: 14px; padding: 0px; margin: 0px;">
+      <li><a href="http://baas.apievangelist.com"><strong><span style="font-size: 20px;">&#8666;</span>&nbsp;&nbsp;Visit My Research On BaaS</strong></a></li>
+    </ul>
+
+  </div>
+
+  <div class="span5" style="float: none; margin: 0 auto; display: inline-block;" align="right">
+
+    <ul class="newslist" style="list-style: none; font-size: 14px; padding: 0px; margin: 0px;">
+      <li><a href="http://portal.apievangelist.com/"><strong>Visit My Research On API Portals&nbsp;&nbsp;<span style="font-size: 20px;">&#8667;</span></strong></a></li>
+    </ul>
+
+  </div>
+
 </div>
-
-<div id="questionsViewer" style="display: none;">
-	<p>This is an editor for the APIs.jon file contained as part of this repository, making them editable through a web interface, and able to save using the Github API (if you have access to repo)--enable full client-side management of Swagger files.</p>
-	<p>This APIs.json editor mounts the default APIs.json file for this project located at /apis.json, and renders to the page for viewing, and inline editing. I've used standard icons to assist in usability.</p>
-	<p>This APIs.json editor works in conjunction with the Swagger editor, allowing for the editing of the entire API discovery layer for this Github repository, and using APIs.json includes, I can link to the other supporting projects in this stack.</p>
-	<p>This is meant to be an quicker, dirtier, Swagger editor, and UI generator that runs 100% on Github, for this particular project. The code is not meant to be clean or for production. I'm purposely making the code verbose, and for instructional purposes, allowing all aspects of this to be modified and remixed as needed..</p>
-</div>
-<p><br /></p>

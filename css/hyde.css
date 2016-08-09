@@ -183,6 +183,7 @@ a:focus {
   background-color: #000;
   padding: 0px;
   margin: 0px;
+  border: 1px solid #FFF;
 }
 .masthead-inner {
 }
@@ -201,7 +202,6 @@ a:focus {
   margin: 0px;
   padding: 0px;
   color: rgba(255,255,255,.5);
-  vertical-align: text-top;
 }
 .colophon-links {
   margin: 0px;
@@ -230,7 +230,6 @@ a:focus {
     margin-bottom: 0;
   }
   .masthead-inner {
-    vertical-align: top;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -240,7 +239,7 @@ a:focus {
     font-size: 64px;
   }
   .colophon {
-    margin-top: 15px;
+    margin-top: 20px;
   }
 }
 

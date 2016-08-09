@@ -4,25 +4,33 @@ layout: default
 
 <div class="posts">
   {% for post in paginator.posts %}
-  <div class="post">
-    <h1>
-      <a href="{{ site.production_url }}{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+    {% if post.title != null %}
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+      <div class="post">
 
-    {{ post.content }}      
-    
-  </div>
+        <h1>
+          <a href="{{ site.production_url }}{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </h1>
+
+        <span class="post-date">{{ post.date | date_to_string }}</span>
+
+        {{ post.content }}
+
+        <p align="center"><a href="{{ site.production_url }}{{ post.url }}">See The Full Blog Post</a>
+
+    </div>
+    <center><hr style="width: 75%;" /></center>
+
+    {% endif %}
   {% endfor %}
 </div>
 
 <!-- Pagination links -->
 <div class="pagination">
   {% if paginator.next_page %}
-    <a href="/master/blog/page{{paginator.next_page}}" class="older">Older</a>
+    <a href="/blog/page{{paginator.next_page}}" class="older">Older</a>
   {% else %}
     <span class="next">Older</span>
   {% endif %}
@@ -30,7 +38,7 @@ layout: default
     {% if paginator.page == 2 %}
       <a href="/" class="newer">Newer</a>
     {% else %}
-      <a href="/master/blog/page{{paginator.previous_page}}" class="newer">Newer</a>
+      <a href="/blog/page{{paginator.previous_page}}" class="newer">Newer</a>
     {% endif %}
   {% else %}
     <span class="previous">Newer</span>
