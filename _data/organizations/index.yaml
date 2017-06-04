@@ -1,0 +1,428 @@
+- slug: university-of-washington
+  name: University of Washington
+  description: >-
+    The University of Washington was one of the earliest higher education
+    institutions I started tracking on with my API research. While it hasn't
+    changed in the last couple years, it has seemed to grow in inventory of
+    APIs. The effort is still a very IT led, web services effort, but I think it
+    has a lot of promise.
+  url: 'http://www.washington.edu/'
+  short_url: ''
+  twitter: ''
+  blog: ''
+  blog_rss: ''
+  github: 'https://github.com/uw-edu'
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/university-of-washington-web-services-logo.png
+  tags: 'Universities,Washington,University,University Portal,University Leader'
+- slug: university-of-warsaw
+  name: University of Warsaw
+  description: >-
+    The University of Warsaw API is a very robust model for APIs in higher
+    education. The platform is about being reused at multiple organization, and
+    provides an interesting blueprint to compare with others.
+  url: 'https://usos.edu.pl'
+  short_url: ''
+  twitter: ''
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/university-of-warsaw-logo.png
+  tags: >-
+    Universities,University,University Leader,University Portal,University
+    Service
+- slug: brigham-young-university
+  name: Brigham Young University
+  description: >-
+    Brigham Young University has the most APIs I've come across with any of my
+    university research. While many are still SOAP services, they are actively
+    working to evolve them. BYU is also leading the conversation when it comes
+    to university API design, and holding university API conferences, bringing
+    together other institutions together to share API knowledge.
+  url: 'https://byu.edu'
+  short_url: ''
+  twitter: ''
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/brigham-young-university.jpeg
+  tags: 'Universities,University,University Leader,University Portal'
+- slug: northwestern-university
+  name: Northwestern University
+  description: >-
+    Northwestern has a very nice set of APIs covering the core functions of
+    university operations like terms, schools, subjects, courses, instructors,
+    buildings and rooms. Everything is organized in a nice, centralized portal
+    for easy access.
+  url: 'http://www.northwestern.edu'
+  short_url: ''
+  twitter: ''
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/northwestern-university.png
+  tags: 'Universities,University Portal,University Leader,Getting Started'
+- slug: university-of-notre-dame
+  name: University of Notre Dame
+  description: >-
+    University of Notre Dame has a central developers portal with a handful of
+    APIs to begin with, including calendar and campus map. The portal provides
+    an area for projects, resources, style guides. It is another great start to
+    a centralized effort on campus.
+  url: 'http://www.nd.edu/'
+  short_url: ''
+  twitter: ''
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/university-of-notre-dame-logo.jpg
+  tags: 'Universities,University Portal,University In Progress'
+- slug: yale-its
+  name: Yale ITS
+  description: >-
+    Yale offers numerous web APIs, organized in a single developer portal. The
+    portal provides many of the common resources you'd find in a public API
+    portal, including document, tools, and other resources. API range from meta
+    data, to messaging, and videos, providing a nice snapshot of campus
+    operations.
+  url: 'http://yale.edu'
+  short_url: ''
+  twitter: 'https://twitter.com/yaleits'
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/yale-logo.png
+  tags: 'Universities,University Leader,University Portal'
+- slug: rutgers-university
+  name: Rutgers University
+  description: >-
+    Rutgers University has a nice central portal, with a sensible list of API
+    resources that are common across university API approaches, but it is still
+    missing much before I'd consider a viable central portal for the
+    institution. Good start, but a definite work in progress.
+  url: 'http://www.rutgers.edu/'
+  short_url: ''
+  twitter: ''
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/rutgers-university.png
+  tags: 'Universities,University In Progress,University Portal'
+- slug: columbia-university
+  name: Columbia University
+  description: >-
+    These API's are provided by, and maintained by the Application Development
+    Initiative at Columbia University. They have started by providing simple
+    authentication, courses and housing for students, in a single developer
+    portal.
+  url: 'http://adicu.com'
+  short_url: ''
+  twitter: ''
+  blog: 'http://adicu.com/blog'
+  blog_rss: ''
+  github: 'https://github.com/adicu'
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/columbia-university-logo.png
+  tags: 'Universities,University Group,University In Progress,University Portal'
+- slug: university-of-maryland
+  name: University of Maryland
+  description: >-
+    The University of Maryland is interesting because it has another, almost
+    central API developer portal that is adjacent to regular IT operations. The
+    simply call it UMD.io, and provide basic course, bus, mapping APIs. They
+    also have a really interesting music composition API that needs more
+    investigation.
+  url: 'http://www.umd.edu/'
+  short_url: ''
+  twitter: ''
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/university-of-maryland.gif
+  tags: 'Universities,University Group,University In Progress,University Portal'
+- slug: university-of-michigan
+  name: University of Michigan
+  description: >-
+    The University of Michigan offers up a core set of course schedule, events,
+    and buildings, along with other mobile, and development resources. The
+    centralized developer portal is dedicated to mobile app development.
+  url: 'http://umich.edu/'
+  short_url: ''
+  twitter: ''
+  blog: ''
+  blog_rss: ''
+  github: 'https://github.com/openmichigan'
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/university-of-michigan-logo.png
+  tags: 'Universities,Michigan,University,University Leader,University Portal'
+- slug: jekyll
+  name: Jekyll
+  description: >-
+    Jekyll is a simple, blog-aware, static site generator for personal, project,
+    or organization sites.
+  url: 'https://jekyllrb.com/'
+  short_url: ''
+  twitter: 'https://twitter.com/jekyllrb'
+  blog: ''
+  blog_rss: ''
+  github: 'https://github.com/jekyll'
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/jekyll-logo.png
+  tags: 'Portal,Website, Communications'
+- slug: floify
+  name: Floify
+  description: Floify
+  url: ''
+  short_url: ''
+  twitter: ''
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: 'https://floify.com/public/images/floify-logo-116x45.png'
+  tags: >-
+    Mortgage Lending,Loan Origination,Real Estate,Finance,Borrower
+    Portal,APIs.io Import
+- slug: socrata
+  name: Socrata
+  description: >-
+    Socrata is the leading developer and provider of Open Data Services, a
+    category of cloud-based Web 2.0 solutions that enable federal, state, and
+    local governments to dramatically improve the reach, usability and social
+    utility of their public information assets. &nbsp;The Socrata Social Data
+    Platform&trade; is a turnkey information delivery platform that reduces
+    lifecycle management costs for government customers while boosting their
+    ability to disseminate relevant information and data-driven services to a
+    wide range of audiences including citizens, civic application developers,
+    researchers, journalists and internal stakeholders.
+  url: 'http://socrata.com'
+  short_url: ''
+  twitter: 'https://twitter.com/socrata'
+  blog: 'http://www.socrata.com/tech-blog/'
+  blog_rss: 'http://www.socrata.com/feed/'
+  github: 'https://github.com/socrata'
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/serviceproviders/socrata_logo.jpg
+  tags: >-
+    Management,Socrata,Data,Management,Deployment,Portal,State
+    Government,Federal Government
+- slug: 3scale
+  name: 3scale
+  description: >-
+    3Scale provides plug-and-play as well as enterprise level API management
+    services. 3Scale is similar to 3Scale connect is a starter platform with a
+    freemium model for delivering your API. You can deploy at no cost, and
+    pay-as-you-go based upon the volume of calls made on your API. This model is
+    well suited to those who are not sure of their API business model or target
+    audience &mdash; or are just looking to test the waters.
+  url: 'http://www.3scale.net'
+  short_url: ''
+  twitter: 'https://twitter.com/3scale'
+  blog: 'http://www.3scale.net/blog/'
+  blog_rss: 'http://www.3scale.net/feed/'
+  github: 'https://github.com/3scale'
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/serviceproviders/3scale-logo.jpg
+  tags: 'Management,Management,My API Stack,Imports,Portal'
+- slug: microsoft-azure
+  name: Microsoft Azure
+  description: >-
+    Microsoft Azure is a cloud computing platform and infrastructure created by
+    Microsoft for building, deploying, and managing applications and services
+    through a global network of Microsoft-managed datacenters. It provides both
+    PaaS and IaaS services and supports many different programming languages,
+    tools and frameworks, including both Microsoft-specific and third-party
+    software and systems
+  url: 'https://azure.microsoft.com/en-us/'
+  short_url: ''
+  twitter: 'https://twitter.com/azure'
+  blog: 'http://azure.microsoft.com/blog/'
+  blog_rss: 'http://azure.microsoft.com/blog/feed/'
+  github: 'https://github.com/Azure'
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/microsoft-azure-logo.png
+  tags: >-
+    Management,API Management
+    Other,Deployment,Compute,Database,Serverless,Portal,Command Line
+    Interface,DNS,DNS Cloud,Reliability,Service Level Agreement,Cloud,Bigcos
+- slug: wso2
+  name: WSO2
+  description: >-
+    WSO2 is the lean enterprise middleware company. It delivers the only
+    complete open source enterprise SOA middleware stack purpose-built as an
+    integrated platform to support today&rsquo;s heterogeneous enterprise
+    environments internally and in the cloud. WSO2&rsquo;s service and support
+    team is led by technical experts who have proven success in deploying
+    enterprise SOAs and contribute to the technology standards that enable them.
+  url: 'http://wso2.com'
+  short_url: ''
+  twitter: 'http://twitter.com/wso2'
+  blog: 'http://wso2.com/blogs/thesource/'
+  blog_rss: 'http://wso2.com/blogs/thesource/feed/'
+  github: 'https://github.com/wso2'
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/wso2-logo-white-800X360.jpg
+  tags: 'Management,API LIfeycle,Portal'
+- slug: readme.io
+  name: ReadMe.io
+  description: >-
+    ReadMe is a developer hub for your startup or code. It's a completely
+    customizable and collaborative place for documentation, support, key
+    generation and more. Don't waste your precious time reimplementing a
+    dev.yourstartup.com. If you have an API, code library, or affiliate program,
+    documentation is hard. Users can't use your product without understanding
+    it, and most documentation on the Internet is lacking. The goal of ReadMe is
+    to make consuming APIs completely painless.
+  url: 'https://readme.io/'
+  short_url: ''
+  twitter: 'https://twitter.com/readmeio'
+  blog: 'https://blog.readme.io/'
+  blog_rss: 'https://blog.readme.io/rss/'
+  github: 'https://github.com/readmeio'
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/readme-io-logo.png
+  tags: 'Management,API LIfeycle,Documentation,Portal'
+- slug: github-pages
+  name: Github Pages
+  description: >-
+    GitHub Pages are public webpages hosted and easily published through GitHub.
+    The quickest way to get up and running is by using the Automatic Page
+    Generator to create some starter HTML and CSS for us. You can then modify
+    our GitHub Pages' content and style remotely via the web or locally on our
+    computer.
+  url: ''
+  short_url: ''
+  twitter: ''
+  blog: ''
+  blog_rss: ''
+  github: 'https://pages.github.com/'
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/githubpages.jpg
+  tags: 'Hosting,Management,Portal'
+- slug: akana
+  name: Akana
+  description: >-
+    Akana helps businesses accelerate digital transformation by securely
+    extending their reach across multiple channels &ndash; mobile, cloud and
+    Internet of Things. Akana enables enterprises to share data as APIs, connect
+    and integrate applications, drive partner adoption, monetize their assets,
+    and provide intelligent insights into their business and operations.
+  url: 'http://www.akana.com/'
+  short_url: ''
+  twitter: 'https://twitter.com/AkanaInc'
+  blog: 'https://blog.akana.com/'
+  blog_rss: 'https://blog.akana.com/feed/'
+  github: 'https://github.com/akanainc'
+  image: ''
+  tags: 'Enterprise,Management,Portal,Deployment,Gateway'
+- slug: atlassian-confluence
+  name: Atlassian Confluence
+  description: >-
+    Confluence is a wiki used by more than half of Fortune 100 companies to
+    connect people with the content and co-workers they need to get their jobs
+    done, faster. Connect your entire business in one place online to
+    collaborate and capture knowledge &ndash; create, share, and discuss your
+    documents, ideas, minutes, and projects.
+  url: 'https://www.atlassian.com/software/confluence'
+  short_url: ''
+  twitter: ''
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/confluence_logo_landing.png
+  tags: 'Documentation,Teams,Code Management,Wiki,Portal'
+- slug: hitch
+  name: Hitch
+  description: >-
+    Hitch is a single platform to help API owners engage with and grow their API
+    community. Our clients show striking similarities in the challenges they
+    face in building integrated and sustainable developer platforms. API
+    providers still struggle to make sure their platform is visible to the right
+    audience. Once found, access is inconsistent and cumbersome and even after
+    onboarding, key engagement tools are seldom available. We have put together
+    a single solution that covers these three key areas.
+  url: 'https://www.hitchhq.com/'
+  short_url: ''
+  twitter: 'https://twitter.com/hitchhq'
+  blog: 'https://blog.hitchhq.com/'
+  blog_rss: 'https://blog.hitchhq.com/feed'
+  github: 'https://github.com/hitchhq'
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/hitch-logo.jpg
+  tags: 'Discovery,Management,Portal'
+- slug: gelato.io
+  name: Gelato.io
+  description: >-
+    Gelato.io is a tool for creating really great API Documentation and
+    Developer Portals. You can describe your API, import and sync with Swagger
+    or API Blueprint, write awesome guides (or get them written for you), have
+    your developers register and get updates when things change, get an
+    automatic API Explorer - everything a good Documentation Site needs and
+    more!
+  url: 'https://gelato.io/'
+  short_url: ''
+  twitter: ''
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/gelato-io-logo.png
+  tags: 'Design,Management,Documentation,Portal,interesting'
+- slug: pagely
+  name: Pagely
+  description: >-
+    Pagely is the first Managed WordPress Hosting service that handles most of
+    the technical stuff like upgrades, performance, and security to allow you to
+    focus on your content. We provide WordPress Hosting for personal sites to
+    multi-server clusters for enterprise and all manner of sites in between.
+  url: 'http://pagely.com/'
+  short_url: ''
+  twitter: 'https://twitter.com/pagely'
+  blog: 'http://blog.pagely.com/'
+  blog_rss: ''
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/pagely-logo.png
+  tags: 'Blogging,Hosting,Web,Portal,Communications'
+- slug: uc-berkeley
+  name: UC Berkeley
+  description: >-
+    The UC Berkeley API was the first API effort out of a school that had a
+    simple, dedicated portal, despite being a very much bottom, often student
+    led effort. They are still working to find there footing across all groups,
+    but APIs keep being added, with the awareness growing.
+  url: 'https://api-central.berkeley.edu/'
+  short_url: ''
+  twitter: 'https://twitter.com/UCBerkeley'
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/berkeley-api-central-logo.png
+  tags: >-
+    Berkeley,California,Universities,University,University Portal,University
+    Leader,API LIfeycle
+- slug: apigee
+  name: Apigee
+  description: >-
+    Apigee delivers an intelligent API platform to accelerate the pace of
+    digital business. &nbsp;We help companies - from disruptive start-ups to the
+    Fortune 100 &ndash; use their enterprise data and services to create
+    connected digital experiences for customers, partners and employees. This is
+    digital business.
+  url: 'https://apigee.com'
+  short_url: ''
+  twitter: 'https://twitter.com/Apigee'
+  blog: 'https://blog.apigee.com/front'
+  blog_rss: 'http://apigee.com/about/blog/blog.xml'
+  github: 'https://github.com/apigee'
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/apigee-logo.png
+  tags: 'BaaS,Management,Deployment,Portal,Gateway'
