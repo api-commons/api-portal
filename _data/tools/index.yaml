@@ -1,30 +1,30 @@
+---
 - slug: docabootstraptheme
   name: doca-bootstrap-theme
   description: Doca theme using Twitter Bootstrap
-  url: 'https://github.com/cloudflare/doca-bootstrap-theme'
-  short_url: ''
-  twitter: ''
-  blog: ''
-  blog_rss: ''
-  github: ''
-  image: 'https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-github.png'
-  tags: 'Documentation,Portal'
+  url: https://github.com/cloudflare/doca-bootstrap-theme
+  shorturl: ""
+  twitter: ""
+  blog: ""
+  blogrss: ""
+  github: ""
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-github.png
+  tags: Documentation,Portal
 - slug: jekyll
   name: Jekyll
-  description: >-
-    Jekyll is a simple, blog-aware, static site generator. It takes a template
-    directory containing raw text files in various formats, runs it through
-    Markdown (or Textile) and Liquid converters, and spits out a complete,
-    ready-to-publish static website suitable for serving with your favorite web
-    server. Jekyll also happens to be the engine behind GitHub Pages, which
-    means you can use Jekyll to host your project&rsquo;s page, blog, or website
-    from GitHub&rsquo;s servers for free.
-  url: 'http://jekyllrb.com/docs/home/'
-  short_url: ''
-  twitter: ''
-  blog: ''
-  blog_rss: ''
-  github: ''
-  image: >-
-    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/blog/jekyll-logo.png
-  tags: 'Ruby,Blog,Pages,Hacker Storytelling,Portal'
+  description: Jekyll is a simple, blog-aware, static site generator. It takes a template
+    directory containing raw text files in various formats, runs it through Markdown
+    (or Textile) and Liquid converters, and spits out a complete, ready-to-publish
+    static website suitable for serving with your favorite web server. Jekyll also
+    happens to be the engine behind GitHub Pages, which means you can use Jekyll to
+    host your project&rsquo;s page, blog, or website from GitHub&rsquo;s servers for
+    free.
+  url: http://jekyllrb.com/docs/home/
+  shorturl: ""
+  twitter: ""
+  blog: ""
+  blogrss: ""
+  github: ""
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/blog/jekyll-logo.png
+  tags: Ruby,Blog,Pages,Hacker Storytelling,Portal
+...
